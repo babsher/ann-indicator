@@ -1,11 +1,8 @@
 #! /usr/bin/python
-# [timestamp,price,volume]
 
-import datetime
 import os
 import numpy as np
-import csv
-from numpy import absolute, arange, arange
+from numpy import absolute, arange
 from scipy.signal import find_peaks_cwt
 from scipy.interpolate import interp1d
 import matplotlib.pyplot as plt
