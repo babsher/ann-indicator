@@ -56,23 +56,30 @@ if __name__ == "__main__":
             buy = np.append(buy, 0)
         else:
             buy = np.append(buy, 1)
-    
+    buy = np.append(buy, 0)
+    x = np.append(x, len(data))
     bsig = interp1d(x,buy)
     
     expNorm = 26
     
     norm = avg(data, expNorm)
     
-    out = []
-    header = []
+    out = None
+    header = None
     for x in xrange(9, 25):
-        header.append(x)
-        a = avg(data, x)
-        out.append(a / norm)
+        a = np.divide(avg(data, x), norm)
+        a = a[9:]
+        if out is None:
+            out = np.array([a])
+            header = np.array([x])
+        else:
+            header = np.append(header, x)
+            out = np.append(out, [a], axis=0)
+        print out.shape, header.shape
     
-    header.append('buy')
-    out.append()
-    print len(out)
+    header = np.append(header, 'buy')
+    out = np.append(out, [bsig(xrange(9, len(data)))], axis=0)
+    print out.shape, header.shape
     
 #    f1 = interp1d(x,y)
 #    newx = np.linspace(4, x[len(x)-1], len(data))
