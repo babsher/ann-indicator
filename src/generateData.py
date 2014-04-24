@@ -1,3 +1,4 @@
+import sys
 #! /usr/bin/python
 
 import os
@@ -80,6 +81,8 @@ if __name__ == "__main__":
     header = np.append(header, 'buy')
     out = np.append(out, [bsig(xrange(9, len(data)))], axis=0)
     print out.shape, header.shape
+    
+    np.savetxt(sys.argv[1], out, delimiter=',')
     
 #    f1 = interp1d(x,y)
 #    newx = np.linspace(4, x[len(x)-1], len(data))
