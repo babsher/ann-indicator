@@ -1,9 +1,7 @@
-import sys
 #! /usr/bin/python
 
-import os
+import sys
 import numpy as np
-from numpy import absolute, arange
 from scipy.signal import find_peaks_cwt
 from scipy.interpolate import interp1d
 import matplotlib.pyplot as plt
