@@ -80,13 +80,12 @@ if __name__ == "__main__":
     
     header = np.append(header, 'buy')
     out = np.append(out, [bsig(xrange(9, len(data)))], axis=0)
+    out = np.transpose(out)
     print out.shape, header.shape
     
-    np.savetxt(sys.argv[1], out, delimiter=',')
+    np.savetxt(sys.argv[1], out, delimiter=',', fmt="%.10f")
     
-#    f1 = interp1d(x,y)
-#    newx = np.linspace(4, x[len(x)-1], len(data))
-#    plt.plot(np.arange(0,len(data)), data, 'b', newx, f1(newx), 'y', newx, bsig(newx), 'k')
+#    plt.plot(np.arange(0,len(data)), data, 'b', xrange(9, len(data)), bsig(xrange(9, len(data))), 'k')
 #    plt.show()
     
     
