@@ -7,7 +7,7 @@ from pybrain.tools.validation import CrossValidator
 from pybrain.structure import RecurrentNetwork, LinearLayer, TanhLayer, BiasUnit, FullConnection, SigmoidLayer, IdentityConnection
 
 num = 15
-hist = 9
+hist = 3
 
 net = RecurrentNetwork()
 net.addInputModule(LinearLayer(num, name = 'i'))
@@ -15,6 +15,8 @@ net.addInputModule(LinearLayer(num, name = 'i'))
 for i in xrange(0,hist):
     net.addModule(LinearLayer(num, name='r{}'.format(i)))
 
+net.addModule(SigmoidLayer(num*hist, name = 'h1'))
+net.addModule(SigmoidLayer(num, name = 'h2'))
 net.addOutputModule(SigmoidLayer(1, name = 'o'))
 
 net.addRecurrentConnection(IdentityConnection(net['i'], net['r0']))
@@ -22,6 +24,7 @@ for i in xrange(1,hist):
     net.addRecurrentConnection(IdentityConnection(net['r{}'.format(i-1)], net['r{}'.format(i)]))
     net.addConnection(FullConnection(net['r{}'.format(i)], net['h1']))
 
+net.addConnection(FullConnection(net['i'], net['h1']))
 net.addConnection(FullConnection(net['h1'], net['h2']))
 net.addConnection(FullConnection(net['h2'], net['o']))
 net.sortModules()

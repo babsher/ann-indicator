@@ -83,7 +83,7 @@ if __name__ == "__main__":
     
     np.savetxt(sys.argv[1], out, delimiter=',', fmt="%.10f")
     
-#    plt.plot(np.arange(0,len(data)), data, 'b', xrange(9, len(data)), bsig(xrange(9, len(data))), 'k')
-#    plt.show()
+    plt.plot(np.arange(0,len(data)), data, 'b', xrange(9, len(data)), bsig(xrange(9, len(data))), 'k')
+    plt.show()
     
     
