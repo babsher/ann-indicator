@@ -6,8 +6,27 @@ from pybrain.supervised import RPropMinusTrainer, BackpropTrainer
 from pybrain.tools.validation import CrossValidator
 from pybrain.structure import RecurrentNetwork, LinearLayer, TanhLayer, BiasUnit, FullConnection, SigmoidLayer, IdentityConnection
 
+def evalRnnOnSeqDataset(net, DS, verbose = False, silent = False):
+    """ evaluate the network on all the sequences of a dataset. """
+    r = 0.
+    samples = 0.
+    for seq in DS:
+        net.reset()
+        for i, t in seq:
+            res = net.activate(i)
+            if verbose:
+                print t, res
+            r += sum((t-res)**2)
+            samples += 1
+        if verbose:
+            print '-'*20
+    r /= samples
+    if not silent:
+        print 'MSE:', r
+    return r
+
 num = 15
-hist = 3
+hist = 9
 
 net = RecurrentNetwork()
 net.addInputModule(LinearLayer(num, name = 'i'))
@@ -17,7 +36,7 @@ for i in xrange(0,hist):
 
 net.addModule(SigmoidLayer(num*hist, name = 'h1'))
 net.addModule(SigmoidLayer(num, name = 'h2'))
-net.addOutputModule(SigmoidLayer(1, name = 'o'))
+net.addOutputModule(TanhLayer(1, name = 'o'))
 
 net.addRecurrentConnection(IdentityConnection(net['i'], net['r0']))
 for i in xrange(1,hist):
@@ -44,11 +63,13 @@ for line in input.readlines():
 print ds
 
 #trainer = RPropMinusTrainer( net, dataset=ds, verbose=True )
-trainer = BackpropTrainer(net, learningrate = 0.3, momentum = 0.3, verbose = True, weightdecay=.001, lrdecay=0)
+#trainer = BackpropTrainer(net, learningrate = 0.5, momentum = 0.3, verbose = True, weightdecay=0, lrdecay=0.000001)
 
 # carry out the training
 #for i in xrange(2):
 #    trainer.trainEpochs( 5 )
 
-trainer.trainOnDataset(ds, 1000)
-trainer.testOnData(verbose= True)
+net.reset()
+trainer = RPropMinusTrainer( net, dataset=ds, verbose=True, etaplus=1.7)
+trainer.trainEpochs(1000)
+evalRnnOnSeqDataset(net, ds, verbose = True)
