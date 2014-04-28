@@ -4,7 +4,7 @@ from pybrain.datasets import SupervisedDataSet
 from pybrain.datasets.sequential import SequentialDataSet
 from pybrain.supervised import RPropMinusTrainer, BackpropTrainer
 from pybrain.tools.validation import CrossValidator
-from pybrain.structure import RecurrentNetwork, LinearLayer, TanhLayer, BiasUnit, FullConnection, SigmoidLayer, IdentityConnection
+from pybrain.structure import RecurrentNetwork, LinearLayer, TanhLayer, FullConnection, SigmoidLayer, IdentityConnection, MDLSTMLayer
 
 def evalRnnOnSeqDataset(net, DS, verbose = False, silent = False):
     """ evaluate the network on all the sequences of a dataset. """
@@ -33,15 +33,19 @@ net.addInputModule(LinearLayer(num, name = 'i'))
 
 for i in xrange(0,hist):
     net.addModule(LinearLayer(num, name='r{}'.format(i)))
+net.addModule(MDLSTMLayer(hist, dim, name='r1'))
+
+net.addConnection(FullConnection(i, h, outSliceTo = 4*dim, name = 'f1'))
+net.addConnection(FullConnection(b, h, outSliceTo = 4*dim, name = 'f2'))
 
 net.addModule(SigmoidLayer(num*hist, name = 'h1'))
 net.addModule(SigmoidLayer(num, name = 'h2'))
 net.addOutputModule(TanhLayer(1, name = 'o'))
 
-net.addRecurrentConnection(IdentityConnection(net['i'], net['r0']))
-for i in xrange(1,hist):
-    net.addRecurrentConnection(IdentityConnection(net['r{}'.format(i-1)], net['r{}'.format(i)]))
-    net.addConnection(FullConnection(net['r{}'.format(i)], net['h1']))
+#net.addRecurrentConnection(IdentityConnection(net['i'], net['r0']))
+#for i in xrange(1,hist):
+#    net.addRecurrentConnection(IdentityConnection(net['r{}'.format(i-1)], net['r{}'.format(i)]))
+#    net.addConnection(FullConnection(net['r{}'.format(i)], net['h1']))
 
 net.addConnection(FullConnection(net['i'], net['h1']))
 net.addConnection(FullConnection(net['h1'], net['h2']))
