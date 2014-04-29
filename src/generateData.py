@@ -15,7 +15,7 @@ def avg(values, window):
     return a
 
 if __name__ == "__main__":
-    file = open('../btceUSD-hourly.csv', 'r')
+    file = open(sys.argv[1], 'r')
     data = []
     for line in file.readlines():
         row = line.split(',')
@@ -64,15 +64,17 @@ if __name__ == "__main__":
     y = data[x]
     
     buy = np.array([])
-    for p in xrange(0,len(data)):
+#    for p in xrange(0,len(data)):
+    for p in x:
         if p in peakind:
             buy = np.append(buy, -1)
         elif p in minind:
             buy = np.append(buy, 1)
         else:
             buy = np.append(buy, 0)
-#    buy = np.append(buy, 0)
-#    bsig = interp1d(np.append(x, len(data)),buy)
+#    buy = buy[9:]
+    buy = np.append(buy, 0)
+    bsig = interp1d(np.append(x, len(data)),buy)
     
     expNorm = 40
     
@@ -92,14 +94,14 @@ if __name__ == "__main__":
         print out.shape, header.shape
     
     header = np.append(header, 'buy')
-#    out = np.append(out, [bsig(xrange(9, len(data)))], axis=0)
-    out = np.append(out, buy, axis=0)
+    out = np.append(out, [bsig(xrange(9, len(data)))], axis=0)
+#    out = np.append(out, [buy], axis=0)
     out = np.transpose(out)
     print out.shape, header.shape
     
-    np.savetxt(sys.argv[1], out, delimiter=',', fmt="%.10f")
+    np.savetxt(sys.argv[2], out, delimiter=',', fmt="%.10f")
     
-    plt.plot(xrange(0,len(data)), data, 'b', xrange(9, len(data)), buy, 'k', minind, data[minind], 'r+', peakind, data[peakind], 'kx')
+#    plt.plot(xrange(0,len(data)), data, 'b', xrange(9, len(data)), buy, 'k', minind, data[minind], 'r+', peakind, data[peakind], 'kx')
     plt.show()
     
     
