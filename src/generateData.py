@@ -64,21 +64,22 @@ if __name__ == "__main__":
     y = data[x]
     
     buy = np.array([])
-#    for p in xrange(0,len(data)):
-    for p in x:
+    for p in xrange(0,len(data)):
+#    for p in x:
         if p in peakind:
             buy = np.append(buy, -1)
         elif p in minind:
             buy = np.append(buy, 1)
         else:
             buy = np.append(buy, 0)
-#    buy = buy[9:]
-    buy = np.append(buy, 0)
-    bsig = interp1d(np.append(x, len(data)),buy)
+    buy = buy[9:]
+#    buy = np.append(buy, 0)
+#    bsig = interp1d(np.append(x, len(data)),buy)
     
     expNorm = 40
     
     norm = avg(data, expNorm)
+    signal = avg(data, 24)[9:]
     
     out = None
     header = None
@@ -86,22 +87,22 @@ if __name__ == "__main__":
         a = np.divide(avg(data, size), norm)
         a = a[9:]
         if out is None:
-            out = np.array([a])
+            out = np.array([np.subtract(a,signal)])
             header = np.array([size])
         else:
             header = np.append(header, size)
-            out = np.append(out, [a], axis=0)
+            out = np.append(out, [np.subtract(a,signal)], axis=0)
         print out.shape, header.shape
     
     header = np.append(header, 'buy')
-    out = np.append(out, [bsig(xrange(9, len(data)))], axis=0)
-#    out = np.append(out, [buy], axis=0)
+#    out = np.append(out, [bsig(xrange(9, len(data)))], axis=0)
+    out = np.append(out, [buy], axis=0)
     out = np.transpose(out)
     print out.shape, header.shape
     
     np.savetxt(sys.argv[2], out, delimiter=',', fmt="%.10f")
     
-#    plt.plot(xrange(0,len(data)), data, 'b', xrange(9, len(data)), buy, 'k', minind, data[minind], 'r+', peakind, data[peakind], 'kx')
+#    plt.plot(xrange(0,len(data)), data, 'b', xrange(9, len(data)), [bsig(xrange(9, len(data)))], 'k', minind, data[minind], 'r+', peakind, data[peakind], 'kx')
     plt.show()
     
     
