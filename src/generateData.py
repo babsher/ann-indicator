@@ -78,20 +78,20 @@ if __name__ == "__main__":
     
     expNorm = 40
     
-    norm = avg(data, expNorm)
+    norm = avg(data, expNorm)[9:]
     signal = avg(data, 24)[9:]
     
     out = None
     header = None
     for size in xrange(9, 25):
-        a = np.divide(avg(data, size), norm)
+        a = avg(data, size)
         a = a[9:]
         if out is None:
-            out = np.array([np.subtract(a,signal)])
+            out = np.array([np.divide(np.subtract(a,signal), norm)])
             header = np.array([size])
         else:
             header = np.append(header, size)
-            out = np.append(out, [np.subtract(a,signal)], axis=0)
+            out = np.append(out, [np.divide(np.subtract(a,signal), norm)], axis=0)
         print out.shape, header.shape
     
     header = np.append(header, 'buy')

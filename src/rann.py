@@ -57,12 +57,15 @@ for line in input.readlines():
     ds.addSample([float(x) for x in row[:15]], float(row[16]))
 print ds
 
-test = SequentialDataSet(15, 1)
-test.newSequence()
-input = open(sys.argv[2], 'r')
-for line in input.readlines():
-    row = np.array(line.split(','))
-    test.addSample([float(x) for x in row[:15]], float(row[16]))
+if len(sys.argv) > 2:
+    test = SequentialDataSet(15, 1)
+    test.newSequence()
+    input = open(sys.argv[2], 'r')
+    for line in input.readlines():
+        row = np.array(line.split(','))
+        test.addSample([float(x) for x in row[:15]], float(row[16]))
+else:
+    test = ds
 print test
 
 net.reset()

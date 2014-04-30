@@ -1,0 +1,2462 @@
+simpleMDLstmNet
+   Modules:
+    [<BiasUnit 'bias'>, <LinearLayer 'i'>, <MDLSTMLayer 'MDlstm'>, <TanhLayer 'o'>]
+   Connections:
+    [<FullConnection 'f1': 'i' -> 'MDlstm'>, <FullConnection 'f2': 'bias' -> 'MDlstm'>, <FullConnection 'f3': 'MDlstm' -> 'o'>]
+   Recurrent Connections:
+    [<FullConnection 'r1': 'MDlstm' -> 'MDlstm'>, <IdentityConnection 'rstate': 'MDlstm' -> 'MDlstm'>]
+sequence_index: dim(2, 1)
+[[ 0.]]
+
+input: dim(32766, 15)
+[[ -1.08759624e-02  -8.16621400e-03  -5.50957240e-03 ...,   1.50154710e-03
+    1.06343360e-03   5.67786500e-04]
+ [ -4.47607860e-03  -8.16621400e-03  -5.50957240e-03 ...,   1.50154710e-03
+    1.06343360e-03   5.67786500e-04]
+ [  2.09863780e-03  -1.79984310e-03  -5.50957240e-03 ...,   1.50154710e-03
+    1.06343360e-03   5.67786500e-04]
+ ..., 
+ [ -3.42065500e-03  -2.79186170e-03  -2.18231480e-03 ...,  -2.73806700e-04
+   -1.85476400e-04  -1.17261400e-04]
+ [ -4.36647410e-03  -3.68030360e-03  -3.01698940e-03 ...,  -2.34447800e-04
+   -1.88850300e-04  -8.39699000e-05]
+ [ -5.41661220e-03  -4.58803270e-03  -3.87605500e-03 ...,  -3.62664200e-04
+   -1.83904500e-04  -1.19330100e-04]]
+
+target: dim(32766, 1)
+[[-0.96581197]
+ [-0.94871795]
+ [-0.93162393]
+ ..., 
+ [-0.75      ]
+ [-0.5       ]
+ [-0.25      ]]
+
+
+sequence_index: dim(2, 1)
+[[ 0.]]
+
+input: dim(1022, 15)
+[[  6.67691250e-03   6.07531790e-03   5.48868690e-03 ...,   1.22881080e-03
+    7.80146700e-04   3.78895500e-04]
+ [  4.50001010e-03   6.07531790e-03   5.48868690e-03 ...,   1.22881080e-03
+    7.80146700e-04   3.78895500e-04]
+ [  2.74659380e-03   3.98939700e-03   5.48868690e-03 ...,   1.22881080e-03
+    7.80146700e-04   3.78895500e-04]
+ ..., 
+ [ -1.34916460e-03  -1.02883750e-03  -1.04464210e-03 ...,   2.65506600e-04
+    1.33374700e-04   3.81459000e-05]
+ [ -1.53832000e-03  -1.11024250e-03  -8.48336200e-04 ...,   1.94711800e-04
+    2.28654700e-04   9.68810000e-05]
+ [ -1.55125070e-03  -1.29731700e-03  -9.51894000e-04 ...,  -8.20433000e-05
+    1.05038100e-04   1.31720100e-04]]
+
+target: dim(1022, 1)
+[[-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-0.94594595]
+ [-0.89189189]
+ [-0.83783784]
+ [-0.78378378]
+ [-0.72972973]
+ [-0.67567568]
+ [-0.62162162]
+ [-0.56756757]
+ [-0.51351351]
+ [-0.45945946]
+ [-0.40540541]
+ [-0.35135135]
+ [-0.2972973 ]
+ [-0.24324324]
+ [-0.18918919]
+ [-0.13513514]
+ [-0.08108108]
+ [-0.02702703]
+ [ 0.02702703]
+ [ 0.08108108]
+ [ 0.13513514]
+ [ 0.18918919]
+ [ 0.24324324]
+ [ 0.2972973 ]
+ [ 0.35135135]
+ [ 0.40540541]
+ [ 0.45945946]
+ [ 0.51351351]
+ [ 0.56756757]
+ [ 0.62162162]
+ [ 0.67567568]
+ [ 0.72972973]
+ [ 0.78378378]
+ [ 0.83783784]
+ [ 0.89189189]
+ [ 0.94594595]
+ [ 1.        ]
+ [ 0.94871795]
+ [ 0.8974359 ]
+ [ 0.84615385]
+ [ 0.79487179]
+ [ 0.74358974]
+ [ 0.69230769]
+ [ 0.64102564]
+ [ 0.58974359]
+ [ 0.53846154]
+ [ 0.48717949]
+ [ 0.43589744]
+ [ 0.38461538]
+ [ 0.33333333]
+ [ 0.28205128]
+ [ 0.23076923]
+ [ 0.17948718]
+ [ 0.12820513]
+ [ 0.07692308]
+ [ 0.02564103]
+ [-0.02564103]
+ [-0.07692308]
+ [-0.12820513]
+ [-0.17948718]
+ [-0.23076923]
+ [-0.28205128]
+ [-0.33333333]
+ [-0.38461538]
+ [-0.43589744]
+ [-0.48717949]
+ [-0.53846154]
+ [-0.58974359]
+ [-0.64102564]
+ [-0.69230769]
+ [-0.74358974]
+ [-0.79487179]
+ [-0.84615385]
+ [-0.8974359 ]
+ [-0.94871795]
+ [-1.        ]
+ [-0.97402597]
+ [-0.94805195]
+ [-0.92207792]
+ [-0.8961039 ]
+ [-0.87012987]
+ [-0.84415584]
+ [-0.81818182]
+ [-0.79220779]
+ [-0.76623377]
+ [-0.74025974]
+ [-0.71428571]
+ [-0.68831169]
+ [-0.66233766]
+ [-0.63636364]
+ [-0.61038961]
+ [-0.58441558]
+ [-0.55844156]
+ [-0.53246753]
+ [-0.50649351]
+ [-0.48051948]
+ [-0.45454545]
+ [-0.42857143]
+ [-0.4025974 ]
+ [-0.37662338]
+ [-0.35064935]
+ [-0.32467532]
+ [-0.2987013 ]
+ [-0.27272727]
+ [-0.24675325]
+ [-0.22077922]
+ [-0.19480519]
+ [-0.16883117]
+ [-0.14285714]
+ [-0.11688312]
+ [-0.09090909]
+ [-0.06493506]
+ [-0.03896104]
+ [-0.01298701]
+ [ 0.01298701]
+ [ 0.03896104]
+ [ 0.06493506]
+ [ 0.09090909]
+ [ 0.11688312]
+ [ 0.14285714]
+ [ 0.16883117]
+ [ 0.19480519]
+ [ 0.22077922]
+ [ 0.24675325]
+ [ 0.27272727]
+ [ 0.2987013 ]
+ [ 0.32467532]
+ [ 0.35064935]
+ [ 0.37662338]
+ [ 0.4025974 ]
+ [ 0.42857143]
+ [ 0.45454545]
+ [ 0.48051948]
+ [ 0.50649351]
+ [ 0.53246753]
+ [ 0.55844156]
+ [ 0.58441558]
+ [ 0.61038961]
+ [ 0.63636364]
+ [ 0.66233766]
+ [ 0.68831169]
+ [ 0.71428571]
+ [ 0.74025974]
+ [ 0.76623377]
+ [ 0.79220779]
+ [ 0.81818182]
+ [ 0.84415584]
+ [ 0.87012987]
+ [ 0.8961039 ]
+ [ 0.92207792]
+ [ 0.94805195]
+ [ 0.97402597]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 1.        ]
+ [ 0.98      ]
+ [ 0.96      ]
+ [ 0.94      ]
+ [ 0.92      ]
+ [ 0.9       ]
+ [ 0.88      ]
+ [ 0.86      ]
+ [ 0.84      ]
+ [ 0.82      ]
+ [ 0.8       ]
+ [ 0.78      ]
+ [ 0.76      ]
+ [ 0.74      ]
+ [ 0.72      ]
+ [ 0.7       ]
+ [ 0.68      ]
+ [ 0.66      ]
+ [ 0.64      ]
+ [ 0.62      ]
+ [ 0.6       ]
+ [ 0.58      ]
+ [ 0.56      ]
+ [ 0.54      ]
+ [ 0.52      ]
+ [ 0.5       ]
+ [ 0.48      ]
+ [ 0.46      ]
+ [ 0.44      ]
+ [ 0.42      ]
+ [ 0.4       ]
+ [ 0.38      ]
+ [ 0.36      ]
+ [ 0.34      ]
+ [ 0.32      ]
+ [ 0.3       ]
+ [ 0.28      ]
+ [ 0.26      ]
+ [ 0.24      ]
+ [ 0.22      ]
+ [ 0.2       ]
+ [ 0.18      ]
+ [ 0.16      ]
+ [ 0.14      ]
+ [ 0.12      ]
+ [ 0.1       ]
+ [ 0.08      ]
+ [ 0.06      ]
+ [ 0.04      ]
+ [ 0.02      ]
+ [ 0.        ]
+ [-0.02      ]
+ [-0.04      ]
+ [-0.06      ]
+ [-0.08      ]
+ [-0.1       ]
+ [-0.12      ]
+ [-0.14      ]
+ [-0.16      ]
+ [-0.18      ]
+ [-0.2       ]
+ [-0.22      ]
+ [-0.24      ]
+ [-0.26      ]
+ [-0.28      ]
+ [-0.3       ]
+ [-0.32      ]
+ [-0.34      ]
+ [-0.36      ]
+ [-0.38      ]
+ [-0.4       ]
+ [-0.42      ]
+ [-0.44      ]
+ [-0.46      ]
+ [-0.48      ]
+ [-0.5       ]
+ [-0.52      ]
+ [-0.54      ]
+ [-0.56      ]
+ [-0.58      ]
+ [-0.6       ]
+ [-0.62      ]
+ [-0.64      ]
+ [-0.66      ]
+ [-0.68      ]
+ [-0.7       ]
+ [-0.72      ]
+ [-0.74      ]
+ [-0.76      ]
+ [-0.78      ]
+ [-0.8       ]
+ [-0.82      ]
+ [-0.84      ]
+ [-0.86      ]
+ [-0.88      ]
+ [-0.9       ]
+ [-0.92      ]
+ [-0.94      ]
+ [-0.96      ]
+ [-0.98      ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-0.91304348]
+ [-0.82608696]
+ [-0.73913043]
+ [-0.65217391]
+ [-0.56521739]
+ [-0.47826087]
+ [-0.39130435]
+ [-0.30434783]
+ [-0.2173913 ]
+ [-0.13043478]
+ [-0.04347826]
+ [ 0.04347826]
+ [ 0.13043478]
+ [ 0.2173913 ]
+ [ 0.30434783]
+ [ 0.39130435]
+ [ 0.47826087]
+ [ 0.56521739]
+ [ 0.65217391]
+ [ 0.73913043]
+ [ 0.82608696]
+ [ 0.91304348]
+ [ 1.        ]
+ [ 0.92      ]
+ [ 0.84      ]
+ [ 0.76      ]
+ [ 0.68      ]
+ [ 0.6       ]
+ [ 0.52      ]
+ [ 0.44      ]
+ [ 0.36      ]
+ [ 0.28      ]
+ [ 0.2       ]
+ [ 0.12      ]
+ [ 0.04      ]
+ [-0.04      ]
+ [-0.12      ]
+ [-0.2       ]
+ [-0.28      ]
+ [-0.36      ]
+ [-0.44      ]
+ [-0.52      ]
+ [-0.6       ]
+ [-0.68      ]
+ [-0.76      ]
+ [-0.84      ]
+ [-0.92      ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-0.92307692]
+ [-0.84615385]
+ [-0.76923077]
+ [-0.69230769]
+ [-0.61538462]
+ [-0.53846154]
+ [-0.46153846]
+ [-0.38461538]
+ [-0.30769231]
+ [-0.23076923]
+ [-0.15384615]
+ [-0.07692308]
+ [ 0.        ]
+ [ 0.07692308]
+ [ 0.15384615]
+ [ 0.23076923]
+ [ 0.30769231]
+ [ 0.38461538]
+ [ 0.46153846]
+ [ 0.53846154]
+ [ 0.61538462]
+ [ 0.69230769]
+ [ 0.76923077]
+ [ 0.84615385]
+ [ 0.92307692]
+ [ 1.        ]
+ [ 0.95      ]
+ [ 0.9       ]
+ [ 0.85      ]
+ [ 0.8       ]
+ [ 0.75      ]
+ [ 0.7       ]
+ [ 0.65      ]
+ [ 0.6       ]
+ [ 0.55      ]
+ [ 0.5       ]
+ [ 0.45      ]
+ [ 0.4       ]
+ [ 0.35      ]
+ [ 0.3       ]
+ [ 0.25      ]
+ [ 0.2       ]
+ [ 0.15      ]
+ [ 0.1       ]
+ [ 0.05      ]
+ [ 0.        ]
+ [-0.05      ]
+ [-0.1       ]
+ [-0.15      ]
+ [-0.2       ]
+ [-0.25      ]
+ [-0.3       ]
+ [-0.35      ]
+ [-0.4       ]
+ [-0.45      ]
+ [-0.5       ]
+ [-0.55      ]
+ [-0.6       ]
+ [-0.65      ]
+ [-0.7       ]
+ [-0.75      ]
+ [-0.8       ]
+ [-0.85      ]
+ [-0.9       ]
+ [-0.95      ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-1.        ]
+ [-0.75      ]
+ [-0.5       ]
+ [-0.25      ]]
+
+
+epoch      0  total error      0.70503   avg weight        1.0244
+epoch      1  total error      0.72201   avg weight        1.0332
+epoch      2  total error      0.56506   avg weight        1.0432
+epoch      3  total error      0.30469   avg weight        1.0515
+epoch      4  total error      0.66656   avg weight        1.0632
+epoch      5  total error      0.27822   avg weight        1.0698
+epoch      6  total error      0.42848   avg weight        1.0874
+epoch      7  total error      0.26556   avg weight        1.1116
+epoch      8  total error      0.31707   avg weight         1.127
+epoch      9  total error      0.26232   avg weight        1.1472
+epoch     10  total error      0.27818   avg weight        1.1489
+epoch     11  total error      0.26119   avg weight        1.1756
+epoch     12  total error       0.2659   avg weight        1.1979
+epoch     13  total error      0.26068   avg weight        1.2324
+epoch     14  total error      0.26118   avg weight         1.286
+epoch     15  total error      0.26067   avg weight        1.3554
+epoch     16  total error      0.26061   avg weight        1.4496
+epoch     17  total error      0.26032   avg weight        1.5737
+epoch     18  total error      0.27158   avg weight        1.7244
+epoch     19  total error      0.26839   avg weight        1.9286
+epoch     20  total error      0.26654   avg weight        2.0991
+epoch     21  total error      0.26489   avg weight        2.3344
+epoch     22  total error      0.26327   avg weight        2.6501
+epoch     23  total error      0.26161   avg weight        2.9177
+epoch     24  total error      0.25985   avg weight        3.2928
+epoch     25  total error      0.26728   avg weight        3.6561
+epoch     26  total error      0.25984   avg weight        3.6513
+epoch     27  total error      0.26041   avg weight        3.8837
+epoch     28  total error      0.25978   avg weight        4.0164
+epoch     29  total error      0.25943   avg weight        4.0252
+epoch     30  total error      0.25963   avg weight        4.2262
+epoch     31  total error      0.25939   avg weight        4.2744
+epoch     32  total error       0.2593   avg weight        4.3916
+epoch     33  total error      0.25931   avg weight        4.5959
+epoch     34  total error      0.25921   avg weight        4.7907
+epoch     35  total error      0.25923   avg weight        5.0186
+epoch     36  total error      0.25913   avg weight        5.1445
+epoch     37  total error      0.25908   avg weight        5.4159
+epoch     38  total error      0.25901   avg weight        5.6646
+epoch     39  total error      0.25894   avg weight          5.95
+epoch     40  total error      0.25893   avg weight          6.29
+epoch     41  total error      0.25885   avg weight         6.588
+epoch     42  total error      0.25879   avg weight        6.8244
+epoch     43  total error      0.25875   avg weight        7.0594
+epoch     44  total error      0.25869   avg weight         7.279
+epoch     45  total error      0.25863   avg weight        7.4425
+epoch     46  total error       0.2586   avg weight        7.6037
+epoch     47  total error      0.25852   avg weight        7.8084
+epoch     48  total error      0.25842   avg weight        8.1963
+epoch     49  total error      0.25834   avg weight        8.4072
+epoch     50  total error      0.25829   avg weight        8.6072
+epoch     51  total error      0.25823   avg weight        8.8165
+epoch     52  total error      0.25815   avg weight        8.9051
+epoch     53  total error      0.25806   avg weight        9.0565
+epoch     54  total error      0.25799   avg weight        9.2695
+epoch     55  total error      0.25792   avg weight        9.3661
+epoch     56  total error      0.25781   avg weight        9.4586
+epoch     57  total error      0.25776   avg weight        9.6395
+epoch     58  total error      0.25758   avg weight         9.821
+epoch     59  total error      0.25771   avg weight        9.9774
+epoch     60  total error      0.25752   avg weight        10.003
+epoch     61  total error      0.25736   avg weight        10.049
+epoch     62  total error      0.25755   avg weight        10.163
+epoch     63  total error      0.25725   avg weight        10.224
+epoch     64  total error      0.25717   avg weight         10.36
+epoch     65  total error      0.25712   avg weight        10.542
+epoch     66  total error      0.25707   avg weight        10.654
+epoch     67  total error      0.25696   avg weight        10.843
+epoch     68  total error       0.2593   avg weight        10.859
+epoch     69  total error      0.25695   avg weight        10.845
+epoch     70  total error      0.25687   avg weight        10.896
+epoch     71  total error       0.2568   avg weight        11.032
+epoch     72  total error      0.25673   avg weight        11.116
+epoch     73  total error      0.25665   avg weight        11.236
+epoch     74  total error      0.25655   avg weight         11.38
+epoch     75  total error      0.25651   avg weight        11.498
+epoch     76  total error      0.25639   avg weight        11.601
+epoch     77  total error      0.25627   avg weight        11.747
+epoch     78  total error      0.25613   avg weight        11.886
+epoch     79  total error      0.25598   avg weight        12.027
+epoch     80  total error      0.25581   avg weight          12.2
+epoch     81  total error      0.25561   avg weight        12.264
+epoch     82  total error      0.25543   avg weight        12.393
+epoch     83  total error      0.25524   avg weight        12.492
+epoch     84  total error      0.25499   avg weight        12.417
+epoch     85  total error      0.25493   avg weight         12.42
+epoch     86  total error      0.25497   avg weight        12.428
+epoch     87  total error      0.25458   avg weight        12.396
+epoch     88  total error      0.25422   avg weight         12.41
+epoch     89  total error      0.25395   avg weight        12.423
+epoch     90  total error      0.25383   avg weight        12.534
+epoch     91  total error      0.25364   avg weight        12.475
+epoch     92  total error      0.25358   avg weight        12.459
+epoch     93  total error      0.25347   avg weight        12.559
+epoch     94  total error      0.25333   avg weight        12.509
+epoch     95  total error      0.25322   avg weight        12.543
+epoch     96  total error      0.25316   avg weight        12.574
+epoch     97  total error      0.25308   avg weight        12.528
+epoch     98  total error      0.25294   avg weight        12.526
+epoch     99  total error       0.2529   avg weight        12.546
+epoch    100  total error       0.2528   avg weight        12.503
+epoch    101  total error       0.2527   avg weight        12.494
+epoch    102  total error      0.25264   avg weight        12.484
+epoch    103  total error      0.25263   avg weight        12.437
+epoch    104  total error      0.25255   avg weight        12.418
+epoch    105  total error       0.2525   avg weight        12.408
+epoch    106  total error      0.25246   avg weight        12.348
+epoch    107  total error       0.2524   avg weight        12.326
+epoch    108  total error      0.25233   avg weight        12.309
+epoch    109  total error      0.25226   avg weight        12.288
+epoch    110  total error      0.25475   avg weight        12.274
+epoch    111  total error      0.25226   avg weight        12.347
+epoch    112  total error      0.25219   avg weight         12.31
+epoch    113  total error      0.25215   avg weight        12.381
+epoch    114  total error       0.2521   avg weight        12.384
+epoch    115  total error      0.25205   avg weight        12.433
+epoch    116  total error      0.25198   avg weight        12.477
+epoch    117  total error      0.25191   avg weight        12.499
+epoch    118  total error      0.25183   avg weight         12.52
+epoch    119  total error      0.25173   avg weight        12.545
+epoch    120  total error      0.25178   avg weight        12.585
+epoch    121  total error      0.25175   avg weight        12.515
+epoch    122  total error      0.25167   avg weight        12.576
+epoch    123  total error      0.25165   avg weight        12.561
+epoch    124  total error      0.25159   avg weight        12.591
+epoch    125  total error      0.25157   avg weight        12.622
+epoch    126  total error      0.25154   avg weight        12.655
+epoch    127  total error      0.25152   avg weight        12.678
+epoch    128  total error      0.25148   avg weight        12.722
+epoch    129  total error      0.25144   avg weight        12.773
+epoch    130  total error      0.25141   avg weight        12.824
+epoch    131  total error      0.25139   avg weight        12.841
+epoch    132  total error      0.25136   avg weight        12.908
+epoch    133  total error      0.25131   avg weight        12.964
+epoch    134  total error      0.25129   avg weight        13.022
+epoch    135  total error      0.25125   avg weight        13.018
+epoch    136  total error      0.25133   avg weight        13.078
+epoch    137  total error      0.25123   avg weight        13.052
+epoch    138  total error      0.25122   avg weight        13.069
+epoch    139  total error       0.2512   avg weight        13.074
+epoch    140  total error      0.25117   avg weight        13.066
+epoch    141  total error      0.25117   avg weight        13.097
+epoch    142  total error      0.25115   avg weight        13.106
+epoch    143  total error      0.25113   avg weight        13.129
+epoch    144  total error      0.25111   avg weight         13.13
+epoch    145  total error      0.25109   avg weight        13.152
+epoch    146  total error      0.25108   avg weight        13.133
+epoch    147  total error      0.25106   avg weight        13.159
+epoch    148  total error      0.25104   avg weight        13.141
+epoch    149  total error      0.25693   avg weight        13.157
+epoch    150  total error      0.25101   avg weight         13.16
+epoch    151  total error      0.25099   avg weight        13.174
+epoch    152  total error      0.25099   avg weight        13.172
+epoch    153  total error      0.32142   avg weight        13.184
+epoch    154  total error      0.25097   avg weight        13.176
+epoch    155  total error      0.31816   avg weight        13.186
+epoch    156  total error      0.31592   avg weight        13.189
+epoch    157  total error       0.3135   avg weight        13.196
+epoch    158  total error      0.31065   avg weight        13.199
+epoch    159  total error      0.30723   avg weight         13.21
+epoch    160  total error       0.3031   avg weight        13.202
+epoch    161  total error      0.29806   avg weight        13.208
+epoch    162  total error      0.29204   avg weight        13.216
+epoch    163  total error      0.28508   avg weight        13.214
+epoch    164  total error      0.27692   avg weight        13.216
+epoch    165  total error      0.26871   avg weight         13.21
+epoch    166  total error      0.26123   avg weight        13.212
+epoch    167  total error      0.25794   avg weight        13.221
+epoch    168  total error      0.26104   avg weight        13.231
+epoch    169  total error      0.25753   avg weight         13.24
+epoch    170  total error      0.25663   avg weight        13.256
+epoch    171  total error      0.25673   avg weight        13.261
+epoch    172  total error      0.31023   avg weight        13.281
+epoch    173  total error      0.25667   avg weight        13.276
+epoch    174  total error      0.25715   avg weight        13.282
+epoch    175  total error      0.25612   avg weight        13.294
+epoch    176  total error      0.25559   avg weight         13.31
+epoch    177  total error      0.30761   avg weight         13.33
+epoch    178  total error      0.30694   avg weight        13.343
+epoch    179  total error      0.30511   avg weight        13.365
+epoch    180  total error      0.30479   avg weight        13.353
+epoch    181  total error       0.3031   avg weight        13.355
+epoch    182 .896
+epoch    185  total error      0.24168   avg weight        11.079
+epoch    186  total error      0.24165   avg weight        11.265
+epoch    187  total error       0.2416   avg weight         11.46
+epoch    188  total error      0.24155   avg weight        11.655
+epoch    189  total error      0.24149   avg weight        11.854
+epoch    190  total error      0.24142   avg weight        12.064
+epoch    191  total error      0.24135   avg weight        12.258
+epoch    192  total error      0.24126   avg weight        12.472
+epoch    193  total error      0.24115   avg weight        12.683
+epoch    194  total error      0.24068   avg weight        12.866
+epoch    195  total error      0.24127   avg weight        13.031
+epoch    196  total error      0.24113   avg weight        13.205
+epoch    197  total error       0.2411   avg weight        13.418
+epoch    198  total error      0.24105   avg weight        13.602
+epoch    199  total error        0.241   avg weight        13.799
+epoch    200  total error      0.24099   avg weight        13.987
+epoch    201  total error      0.24098   avg weight        14.177
+epoch    202  total error      0.24093   avg weight        14.366
+epoch    203  total error      0.24089   avg weight        14.577
+epoch    204  total error      0.24083   avg weight        14.783
+epoch    205  total error      0.24084   avg weight        14.983
+epoch    206  total error      0.24085   avg weight        15.189
+epoch    207  total error      0.24088   avg weight        15.392
+epoch    208  total error      0.24055   avg weight        15.592
+epoch    209  total error      0.24086   avg weight        15.799
+epoch    210  total error      0.24035   avg weight        16.006
+epoch    211  total error      0.24085   avg weight        16.215
+epoch    212  total error       0.2402   avg weight        16.425
+epoch    213  total error      0.24084   avg weight        16.637
+epoch    214  total error       0.2401   avg weight        16.851
+epoch    215  total error      0.24081   avg weight        17.067
+epoch    216  total error       0.2401   avg weight        17.285
+epoch    217  total error      0.24081   avg weight        17.507
+epoch    218  total error      0.24071   avg weight        17.708
+epoch    219  total error      0.24079   avg weight        17.853
+epoch    220  total error      0.24098   avg weight        18.025
+epoch    221  total error      0.24018   avg weight        18.197
+epoch    222  total error      0.24082   avg weight        18.364
+epoch    223  total error      0.24008   avg weight        18.533
+epoch    224  total error      0.24077   avg weight        18.701
+epoch    225  total error       0.2401   avg weight         18.87
+epoch    226  total error      0.24032   avg weight        19.041
+epoch    227  total error      0.24076   avg weight        19.218
+epoch    228  total error      0.24028   avg weight        19.401
+epoch    229  total error      0.24077   avg weight        19.586
+epoch    230  total error      0.24078   avg weight        19.774
+epoch    231  total error       0.2408   avg weight        19.965
+epoch    232  total error      0.24077   avg weight        20.158
+epoch    233  total error      0.24076   avg weight        20.285
+epoch    234  total error      0.24077   avg weight        20.457
+epoch    235  total error      0.24073   avg weight        20.642
+epoch    236  total error      0.24077   avg weight        20.803
+epoch    237  total error      0.24073   avg weight        20.965
+epoch    238  total error      0.24027   avg weight        21.123
+epoch    239  total error      0.24073   avg weight        21.304
+epoch    240  total error      0.24026   avg weight        21.339
+epoch    241  total error      0.24073   avg weight        21.491
+epoch    242  total error      0.24026   avg weight        21.626
+epoch    243  total error      0.24073   avg weight        21.768
+epoch    244  total error      0.24077   avg weight        21.917
+epoch    245  total error      0.24073   avg weight        22.074
+epoch    246  total error      0.24026   avg weight         22.24
+epoch    247  total error      0.24073   avg weight        22.403
+epoch    248  total error      0.24026   avg weight        22.599
+epoch    249  total error      0.24073   avg weight        22.784
+epoch    250  total error      0.24026   avg weight        22.975
+epoch    251  total error      0.24073   avg weight        23.139
+epoch    252  total error      0.24077   avg weight        23.308
+epoch    253  total error      0.24073   avg weight        23.342
+epoch    254  total error      0.24026   avg weight         23.41
+epoch    255  total error      0.24073   avg weight        23.559
+epoch    256  total error      0.24077   avg weight        23.688
+epoch    257  total error      0.24073   avg weight        23.817
+epoch    258  total error      0.24026   avg weight         23.95
+epoch    259  total error      0.24073   avg weight        24.089
+epoch    260  total error      0.24077   avg weight        24.236
+epoch    261  total error      0.24073   avg weight        24.387
+epoch    262  total error      0.24077   avg weight        24.566
+epoch    263  total error      0.24073   avg weight        24.748
+epoch    264  total error      0.24077   avg weight        24.942
+epoch    265  total error      0.24073   avg weight        25.133
+epoch    266  total error      0.24077   avg weight        25.329
+epoch    267  total error      0.24073   avg weight        25.529
+epoch    268  total error      0.24026   avg weight         25.73
+epoch    269  total error      0.24072   avg weight         25.94
+epoch    270  total error      0.24077   avg weight        26.146
+epoch    271  total error      0.24072   avg weight        26.351
+epoch    272  total error      0.24026   avg weight         26.42
+epoch    273  total error      0.24072   avg weight        26.531
+epoch    274  total error      0.24077   avg weight        26.716
+epoch    275  total error      0.24072   avg weight        26.887
+epoch    276  total error      0.24025   avg weight        27.065
+epoch    277  total error      0.24073   avg weight        27.249
+epoch    278  total error      0.24025   avg weight        27.429
+epoch    279  total error      0.24073   avg weight         27.63
+epoch    280  total error      0.24025   avg weight        27.835
+epoch    281  total error      0.24072   avg weight        28.054
+epoch    282  total error      0.24025   avg weight        28.284
+epoch    283  total error      0.24072   avg weight        28.398
+epoch    284  total error      0.24025   avg weight        28.556
+epoch    285  total error      0.24072   avg weight        28.719
+epoch    286  total error      0.24025   avg weight        28.881
+epoch    287  total error      0.24072   avg weight        29.121
+epoch    288  total error      0.24025   avg weight        29.219
+epoch    289  total error      0.24072   avg weight        29.427
+epoch    290  total error      0.24076   avg weight        29.626
+epoch    291  total error      0.24072   avg weight        29.762
+epoch    292  total error      0.24076   avg weight         29.93
+epoch    293  total error      0.24072   avg weight        30.093
+epoch    294  total error      0.24025   avg weight        30.259
+epoch    295  total error      0.24072   avg weight        30.447
+epoch    296  total error      0.24025   avg weight        30.605
+epoch    297  total error      0.24072   avg weight        30.766
+epoch    298  total error      0.24076   avg weight        30.935
+epoch    299  total error      0.24072   avg weight        31.098
+epoch    300  total error      0.24076   avg weight         31.26
+epoch    301  total error      0.24072   avg weight        31.426
+epoch    302  total error      0.24076   avg weight        31.595
+epoch    303  total error      0.24072   avg weight        31.765
+epoch    304  total error      0.24025   avg weight        31.936
+epoch    305  total error      0.24072   avg weight        32.078
+epoch    306  total error      0.24025   avg weight        32.229
+epoch    307  total error      0.24072   avg weight        32.358
+epoch    308  total error      0.24076   avg weight        32.467
+epoch    309  total error      0.24072   avg weight        32.605
+epoch    310  total error      0.24076   avg weight        32.727
+epoch    311  total error      0.24072   avg weight        32.864
+epoch    312  total error      0.24025   avg weight        33.002
+epoch    313  total error      0.24072   avg weight        33.139
+epoch    314  total error      0.24025   avg weight        33.279
+epoch    315  total error      0.24072   avg weight        33.418
+epoch    316  total error      0.24076   avg weight        33.541
+epoch    317  total error      0.24072   avg weight        33.592
+epoch    318  total error      0.24076   avg weight        33.702
+epoch    319  total error      0.24072   avg weight        33.804
+epoch    320  total error      0.24025   avg weight        33.906
+epoch    321  total error      0.24072   avg weight        33.941
+epoch    322  total error      0.24076   avg weight        34.029
+epoch    323  total error      0.24072   avg weight        34.103
+epoch    324  total error      0.24076   avg weight        34.176
+epoch    325  total error      0.24072   avg weight        34.268
+epoch    326  total error      0.24025   avg weight        34.364
+epoch    327  total error      0.24072   avg weight        34.466
+epoch    328  total error      0.24076   avg weight        34.577
+epoch    329  total error      0.24072   avg weight        34.692
+epoch    330  total error      0.24025   avg weight        34.811
+epoch    331  total error      0.24072   avg weight        34.938
+epoch    332  total error      0.24076   avg weight         35.08
+epoch    333  total error      0.24072   avg weight        35.118
+epoch    334  total error      0.24076   avg weight        35.195
+epoch    335  total error      0.24072   avg weight        35.281
+epoch    336  total error      0.24076   avg weight        35.392
+epoch    337  total error      0.24072   avg weight        35.504
+epoch    338  total error      0.24076   avg weight        35.611
+epoch    339  total error      0.24073   avg weight        35.731
+epoch    340  total error      0.24076   avg weight        35.856
+epoch    341  total error      0.24072   avg weight        35.952
+epoch    342  total error      0.24076   avg weight        36.089
+epoch    343  total error      0.24072   avg weight        36.226
+epoch    344  total error      0.24076   avg weight         36.35
+epoch    345  total error      0.24071   avg weight        36.498
+epoch    346  total error      0.24025   avg weight        36.644
+epoch    347  total error      0.24071   avg weight        36.789
+epoch    348  total error      0.24025   avg weight        36.934
+epoch    349  total error      0.24071   avg weight        37.077
+epoch    350  total error      0.24076   avg weight        37.194
+epoch    351  total error      0.24071   avg weight        37.345
+epoch    352  total error      0.24025   avg weight        37.474
+epoch    353  total error      0.24071   avg weight         37.61
+epoch    354  total error      0.24025   avg weight        37.746
+epoch    355  total error      0.24071   avg weight        37.881
+epoch    356  total error      0.24025   avg weight        38.054
+epoch    357  total error      0.24071   avg weight        38.206
+epoch    358  total error      0.24076   avg weight        38.344
+epoch    359  total error      0.24071   avg weight        38.501
+epoch    360  total error      0.24024   avg weight         38.53
+epoch    361  total error      0.24071   avg weight        38.674
+epoch    362  total error      0.24024   avg weight        38.736
+epoch    363  total error      0.24071   avg weight        38.793
+epoch    364  total error      0.24076   avg weight        38.882
+epoch    365  total error      0.24071   avg weight        38.974
+epoch    366  total error      0.24076   avg weight        39.049
+epoch    367  total error      0.24071   avg weight        39.145
+epoch    368  total error      0.24024   avg weight        39.245
+epoch    369  total error      0.24071   avg weight        39.351
+epoch    370  total error      0.24076   avg weight        39.541
+epoch    371  total error      0.24071   avg weight        39.686
+epoch    372  total error      0.24076   avg weight        39.843
+epoch    373  total error      0.24071   avg weight        40.049
+epoch    374  total error      0.24024   avg weight         40.19
+epoch    375  total error      0.24071   avg weight        40.042
+epoch    376  total error      0.24076   avg weight        40.131
+epoch    377  total error      0.24071   avg weight         40.21
+epoch    378  total error      0.24076   avg weight        40.321
+epoch    379  total error      0.24071   avg weight        40.428
+epoch    380  total error      0.24024   avg weight        40.578
+epoch    381  total error      0.24071   avg weight        40.594
+epoch    382  total error      0.24076   avg weight         40.65
+epoch    383  total error      0.24071   avg weight        40.741
+epoch    384  total error      0.24076   avg weight        40.816
+epoch    385  total error      0.24071   avg weight         40.92
+epoch    386  total error      0.24076   avg weight        41.009
+epoch    387  total error      0.24071   avg weight          41.1
+epoch    388  total error      0.24076   avg weight        40.969
+epoch    389  total error      0.24071   avg weight        41.015
+epoch    390  total error      0.24024   avg weight        41.049
+epoch    391  total error      0.24071   avg weight        41.126
+epoch    392  total error      0.24024   avg weight        41.149
+epoch    393  total error      0.24071   avg weight        41.217
+epoch    394  total error      0.24076   avg weight        41.272
+epoch    395  total error      0.24071   avg weight        41.336
+epoch    396  total error      0.24024   avg weight        41.409
+epoch    397  total error      0.24071   avg weight        41.473
+epoch    398  total error      0.24076   avg weight        41.539
+epoch    399  total error      0.24071   avg weight        41.605
+epoch    400  total error      0.24024   avg weight        41.671
+epoch    401  total error      0.24071   avg weight        41.736
+epoch    402  total error      0.24076   avg weight        41.821
+epoch    403  total error      0.24071   avg weight         41.87
+epoch    404  total error      0.24024   avg weight         41.92
+epoch    405  total error      0.24071   avg weight        41.964
+epoch    406  total error      0.24076   avg weight         42.01
+epoch    407  total error      0.24071   avg weight        42.055
+epoch    408  total error      0.24024   avg weight        42.097
+epoch    409  total error      0.24071   avg weight        42.143
+epoch    410  total error      0.24076   avg weight         42.19
+epoch    411  total error      0.24071   avg weight        42.237
+epoch    412  total error      0.24024   avg weight         42.29
+epoch    413  total error      0.24071   avg weight        42.338
+epoch    414  total error      0.24076   avg weight        42.388
+epoch    415  total error      0.24071   avg weight        42.439
+epoch    416  total error      0.24076   avg weight        42.493
+epoch    417  total error      0.24071   avg weight         42.55
+epoch    418  total error      0.24024   avg weight        42.601
+epoch    419  total error      0.24071   avg weight        42.659
+epoch    420  total error      0.24075   avg weight        42.718
+epoch    421  total error      0.24071   avg weight        42.779
+epoch    422  total error      0.24024   avg weight        42.841
+epoch    423  total error      0.24071   avg weight        42.906
+epoch    424  total error      0.24075   avg weight        42.963
+epoch    425  total error      0.24071   avg weight        43.025
+epoch    426  total error      0.24024   avg weight        43.091
+epoch    427  total error      0.24071   avg weight        43.158
+epoch    428  total error      0.24075   avg weight        43.227
+epoch    429  total error      0.24071   avg weight        43.298
+epoch    430  total error      0.24075   avg weight         43.36
+epoch    431  total error      0.24071   avg weight        43.427
+epoch    432  total error      0.24075   avg weight        43.497
+epoch    433  total error      0.24071   avg weight        43.568
+epoch    434  total error      0.24024   avg weight        43.641
+epoch    435  total error      0.24071   avg weight        43.715
+epoch    436  total error      0.24075   avg weight        43.783
+epoch    437  total error      0.24071   avg weight        43.853
+epoch    438  total error      0.24075   avg weight        43.923
+epoch    439  total error      0.24071   avg weight        43.995
+epoch    440  total error      0.24024   avg weight        44.068
+epoch    441  total error      0.24071   avg weight        44.137
+epoch    442  total error      0.24075   avg weight        44.207
+epoch    443  total error      0.24071   avg weight        44.277
+epoch    444  total error      0.24023   avg weight        44.345
+epoch    445  total error      0.24073   avg weight        44.412
+epoch    446  total error      0.24076   avg weight        44.468
+epoch    447  total error      0.24073   avg weight        44.527
+epoch    448  total error      0.24075   avg weight        44.577
+epoch    449  total error      0.24645   avg weight        44.624
+epoch    450  total error      0.24717   avg weight        44.654
+epoch    451  total error      0.24776   avg weight        44.659
+epoch    452  total error      0.24939   avg weight        44.649
+epoch    453  total error      0.24777   avg weight        44.627
+epoch    454  total error      0.24751   avg weight        44.658
+epoch    455  total error      0.24636   avg weight        44.654
+epoch    456  total error      0.24748   avg weight        44.665
+epoch    457  total error      0.24606   avg weight        44.669
+epoch    458  total error      0.24624   avg weight        44.697
+epoch    459  total error      0.24992   avg weight        44.712
+epoch    460  total error      0.24665   avg weight        44.705
+epoch    461  total error       0.2468   avg weight        44.708
+epoch    462  total error       0.2471   avg weight        44.703
+epoch    463  total error      0.24987   avg weight          44.7
+epoch    464  total error      0.24604   avg weight        44.698
+epoch    465  total error      0.24596   avg weight        44.715
+epoch    466  total error      0.24587   avg weight        44.725
+epoch    467  total error      0.24573   avg weight        44.736
+epoch    468  total error      0.24691   avg weight        44.732
+epoch    469  total error       0.2456   avg weight        44.736
+epoch    470  total error      0.24599   avg weight        44.739
+epoch    471  total error      0.24559   avg weight        44.756
+epoch    472  total error      0.24575   avg weight        44.772
+epoch    473  total error      0.24551   avg weight        44.789
+epoch    474  total error      0.24565   avg weight        44.812
+epoch    475  total error      0.24542   avg weight        44.838
+epoch    476  total error      0.24559   avg weight         44.87
+epoch    477  total error      0.24532   avg weight        44.907
+epoch    478  total error      0.24545   avg weight        44.952
+epoch    479  total error      0.24516   avg weight        45.008
+epoch    480  total error      0.24525   avg weight        45.073
+epoch    481  total error      0.24492   avg weight        45.152
+epoch    482  total error      0.24494   avg weight        45.247
+epoch    483  total error      0.24453   avg weight        45.345
+epoch    484  total error      0.24443   avg weight        45.447
+epoch    485  total error      0.24386   avg weight        45.554
+epoch    486  total error      0.24355   avg weight        45.665
+epoch    487  total error      0.24279   avg weight        45.776
+epoch    488  total error      0.24253   avg weight        45.886
+epoch    489  total error      0.24242   avg weight        45.997
+epoch    490  total error      0.24254   avg weight        46.108
+epoch    491  total error      0.24225   avg weight        46.218
+epoch    492  total error      0.24248   avg weight        46.328
+epoch    493  total error       0.2422   avg weight        46.437
+epoch    494  total error      0.24232   avg weight        46.545
+epoch    495  total error      0.24215   avg weight        46.652
+epoch    496  total error      0.24227   avg weight        46.759
+epoch    497  total error      0.24208   avg weight        46.863
+epoch    498  total error      0.24219   avg weight        46.966
+epoch    499  total error        0.242   avg weight        47.066
+epoch    500  total error       0.2421   avg weight        47.164
+epoch    501  total error       0.2419   avg weight        47.259
+epoch    502  total error      0.24199   avg weight        47.349
+epoch    503  total error      0.24179   avg weight        47.435
+epoch    504  total error      0.24188   avg weight        47.518
+epoch    505  total error      0.24171   avg weight        47.599
+epoch    506  total error       0.2418   avg weight        47.676
+epoch    507  total error      0.24163   avg weight        47.749
+epoch    508  total error      0.24178   avg weight        47.817
+epoch    509  total error      0.24158   avg weight         47.88
+epoch    510  total error       0.2417   avg weight        47.935
+epoch    511  total error       0.2415   avg weight        47.981
+epoch    512  total error      0.24162   avg weight        48.029
+epoch    513  total error      0.24144   avg weight        48.077
+epoch    514  total error      0.24159   avg weight        48.196
+epoch    515  total error      0.24142   avg weight        48.262
+epoch    516  total error      0.24158   avg weight        48.329
+epoch    517  total error       0.2414   avg weight        48.392
+epoch    518  total error      0.24153   avg weight        48.452
+epoch    519  total error      0.24136   avg weight        48.508
+epoch    520  total error      0.24149   avg weight         48.56
+epoch    521  total error       0.2413   avg weight        48.614
+epoch    522  total error      0.24142   avg weight        48.668
+epoch    523  total error      0.24122   avg weight        48.723
+epoch    524  total error      0.24135   avg weight         48.78
+epoch    525  total error      0.24114   avg weight        48.837
+epoch    526  total error      0.24137   avg weight        48.895
+epoch    527  total error      0.24111   avg weight        48.955
+epoch    528  total error      0.24123   avg weight        49.015
+epoch    529  total error      0.24102   avg weight        49.076
+epoch    530  total error      0.24118   avg weight        49.139
+epoch    531  total error      0.24099   avg weight        49.202
+epoch    532  total error      0.24112   avg weight        49.266
+epoch    533  total error      0.24094   avg weight        49.331
+epoch    534  total error      0.24107   avg weight        49.398
+epoch    535  total error       0.2409   avg weight        49.486
+epoch    536  total error      0.24183   avg weight        49.569
+epoch    537  total error      0.24086   avg weight        49.643
+epoch    538  total error      0.24176   avg weight        49.719
+epoch    539  total error      0.24084   avg weight        49.896
+epoch    540  total error      0.24174   avg weight        50.004
+epoch    541  total error       0.2408   avg weight        50.111
+epoch    542  total error      0.24168   avg weight         50.21
+epoch    543  total error      0.24078   avg weight        50.305
+epoch    544  total error      0.24167   avg weight        50.393
+epoch    545  total error      0.24077   avg weight        50.476
+epoch    546  total error      0.24164   avg weight        50.559
+epoch    547  total error      0.24075   avg weight        50.643
+epoch    548  total error      0.24161   avg weight        50.727
+epoch    549  total error      0.24073   avg weight        50.811
+epoch    550  total error      0.24157   avg weight        50.898
+epoch    551  total error      0.24072   avg weight        50.984
+epoch    552  total error      0.24155   avg weight        51.071
+epoch    553  total error      0.24071   avg weight        51.158
+epoch    554  total error      0.24154   avg weight        51.246
+epoch    555  total error       0.2407   avg weight        51.334
+epoch    556  total error      0.24152   avg weight        51.423
+epoch    557  total error       0.2407   avg weight        51.513
+epoch    558  total error      0.24151   avg weight        51.646
+epoch    559  total error      0.24068   avg weight        51.736
+epoch    560  total error       0.2415   avg weight        51.841
+epoch    561  total error      0.24067   avg weight        51.953
+epoch    562  total error       0.2415   avg weight        52.068
+epoch    563  total error      0.24066   avg weight        52.187
+epoch    564  total error      0.24148   avg weight        52.303
+epoch    565  total error      0.24065   avg weight        52.416
+epoch    566  total error      0.24146   avg weight        52.524
+epoch    567  total error      0.24064   avg weight        52.628
+epoch    568  total error      0.24144   avg weight        52.725
+epoch    569  total error      0.24063   avg weight        52.819
+epoch    570  total error      0.24143   avg weight        52.913
+epoch    571  total error      0.24061   avg weight        53.008
+epoch    572  total error      0.24142   avg weight        53.103
+epoch    573  total error      0.24061   avg weight        53.188
+epoch    574  total error      0.24141   avg weight        53.281
+epoch    575  total error      0.24061   avg weight        53.369
+epoch    576  total error       0.2414   avg weight        53.461
+epoch    577  total error       0.2406   avg weight        53.551
+epoch    578  total error       0.2414   avg weight        53.642
+epoch    579  total error      0.24059   avg weight        53.732
+epoch    580  total error      0.24139   avg weight        53.824
+epoch    581  total error      0.24059   avg weight        53.914
+epoch    582  total error      0.24138   avg weight        54.006
+epoch    583  total error      0.24058   avg weight        54.097
+epoch    584  total error      0.24137   avg weight        54.188
+epoch    585  total error      0.24058   avg weight         54.28
+epoch    586  total error      0.24137   avg weight        54.371
+epoch    587  total error      0.24058   avg weight        54.463
+epoch    588  total error      0.24137   avg weight        54.555
+epoch    589  total error      0.24057   avg weight        54.646
+epoch    590  total error      0.24136   avg weight        54.738
+epoch    591  total error      0.24057   avg weight        54.829
+epoch    592  total error      0.24136   avg weight         54.92
+epoch    593  total error      0.24056   avg weight        55.013
+epoch    594  total error      0.24136   avg weight        55.105
+epoch    595  total error      0.24056   avg weight        55.197
+epoch    596  total error      0.24135   avg weight        55.288
+epoch    597  total error      0.24056   avg weight        55.381
+epoch    598  total error      0.24135   avg weight        55.474
+epoch    599  total error      0.24055   avg weight        55.566
+epoch    600  total error      0.24134   avg weight        55.658
+epoch    601  total error      0.24055   avg weight        55.751
+epoch    602  total error      0.24134   avg weight        55.844
+epoch    603  total error      0.24055   avg weight        55.937
+epoch    604  total error      0.24134   avg weight         56.03
+epoch    605  total error      0.24054   avg weight        56.123
+epoch    606  total error      0.24133   avg weight        56.216
+epoch    607  total error      0.24054   avg weight        56.309
+epoch    608  total error      0.24133   avg weight        56.403
+epoch    609  total error      0.24054   avg weight        56.496
+epoch    610  total error      0.24133   avg weight        56.589
+epoch    611  total error      0.24053   avg weight        56.683
+epoch    612  total error      0.24132   avg weight        56.589
+epoch    613  total error      0.24053   avg weight        56.636
+epoch    614  total error      0.24132   avg weight        56.683
+epoch    615  total error      0.24053   avg weight        56.739
+epoch    616  total error      0.24132   avg weight        56.806
+epoch    617  total error      0.24053   avg weight        56.887
+epoch    618  total error      0.24131   avg weight        56.981
+epoch    619  total error      0.24052   avg weight        57.075
+epoch    620  total error      0.24131   avg weight        56.981
+epoch    621  total error      0.24052   avg weight        57.028
+epoch    622  total error      0.24131   avg weight        56.981
+epoch    623  total error      0.24052   avg weight        57.005
+epoch    624  total error      0.24131   avg weight        56.981
+epoch    625  total error      0.24052   avg weight        56.993
+epoch    626  total error      0.24131   avg weight        56.981
+epoch    627  total error      0.24052   avg weight        56.975
+epoch    628  total error      0.24131   avg weight        56.969
+epoch    629  total error      0.24052   avg weight        56.962
+epoch    630  total error       0.2413   avg weight        56.954
+epoch    631  total error      0.24052   avg weight        56.944
+epoch    632  total error       0.2413   avg weight        56.932
+epoch    633  total error      0.24051   avg weight        56.917
+epoch    634  total error       0.2413   avg weight          56.9
+epoch    635  total error      0.24051   avg weight        56.879
+epoch    636  total error       0.2413   avg weight        56.853
+epoch    637  total error      0.24051   avg weight        56.823
+epoch    638  total error       0.2413   avg weight        56.787
+epoch    639  total error      0.24051   avg weight        56.743
+epoch    640  total error      0.24129   avg weight        56.691
+epoch    641  total error      0.24051   avg weight        56.629
+epoch    642  total error      0.24129   avg weight        56.554
+epoch    643  total error      0.24051   avg weight        56.464
+epoch    644  total error      0.24129   avg weight         56.37
+epoch    645  total error      0.24051   avg weight        56.277
+epoch    646  total error      0.24129   avg weight        56.184
+epoch    647  total error      0.24051   avg weight        56.091
+epoch    648  total error      0.24129   avg weight        55.998
+epoch    649  total error      0.24051   avg weight        55.905
+epoch    650  total error      0.24129   avg weight        55.812
+epoch    651  total error      0.24051   avg weight        55.719
+epoch    652  total error      0.24129   avg weight        55.627
+epoch    653  total error      0.24051   avg weight        55.534
+epoch    654  total error      0.24129   avg weight        55.441
+epoch    655  total error       0.2405   avg weight        55.349
+epoch    656  total error      0.24129   avg weight        55.256
+epoch    657  total error       0.2405   avg weight        55.164
+epoch    658  total error      0.24129   avg weight        55.072
+epoch    659  total error       0.2405   avg weight         54.98
+epoch    660  total error      0.24129   avg weight        54.887
+epoch    661  total error       0.2405   avg weight        54.795
+epoch    662  total error      0.24128   avg weight        54.703
+epoch    663  total error       0.2405   avg weight        54.611
+epoch    664  total error      0.24128   avg weight        54.519
+epoch    665  total error       0.2405   avg weight        54.428
+epoch    666  total error      0.24128   avg weight        54.336
+epoch    667  total error       0.2405   avg weight        54.244
+epoch    668  total error      0.24128   avg weight        54.152
+epoch    669  total error       0.2405   avg weight        54.243
+epoch    670  total error      0.24128   avg weight        54.289
+epoch    671  total error       0.2405   avg weight        54.334
+epoch    672  total error      0.24128   avg weight        54.388
+epoch    673  total error       0.2405   avg weight        54.453
+epoch    674  total error      0.24128   avg weight        54.533
+epoch    675  total error       0.2405   avg weight        54.625
+epoch    676  total error      0.24128   avg weight        54.717
+epoch    677  total error       0.2405   avg weight        54.809
+epoch    678  total error      0.24128   avg weight          54.9
+epoch    679  total error       0.2405   avg weight        54.992
+epoch    680  total error      0.24128   avg weight        55.084
+epoch    681  total error       0.2405   avg weight        55.176
+epoch    682  total error      0.24128   avg weight        55.267
+epoch    683  total error       0.2405   avg weight        55.359
+epoch    684  total error      0.24128   avg weight        55.451
+epoch    685  total error       0.2405   avg weight        55.543
+epoch    686  total error      0.24128   avg weight        55.634
+epoch    687  total error       0.2405   avg weight        55.726
+epoch    688  total error      0.24127   avg weight        55.817
+epoch    689  total error       0.2405   avg weight        55.908
+epoch    690  total error      0.24127   avg weight        55.999
+epoch    691  total error       0.2405   avg weight        56.089
+epoch    692  total error      0.24127   avg weight        56.179
+epoch    693  total error       0.2405   avg weight        56.269
+epoch    694  total error      0.24127   avg weight        56.357
+epoch    695  total error      0.24049   avg weight        56.445
+epoch    696  total error      0.24127   avg weight        56.532
+epoch    697  total error      0.24049   avg weight        56.618
+epoch    698  total error      0.24127   avg weight        56.703
+epoch    699  total error      0.24049   avg weight        56.785
+epoch    700  total error      0.24127   avg weight        56.866
+epoch    701  total error      0.24049   avg weight        56.944
+epoch    702  total error      0.24127   avg weight        56.831
+epoch    703  total error      0.24049   avg weight        56.761
+epoch    704  total error      0.24127   avg weight        56.686
+epoch    705  total error      0.24049   avg weight        56.597
+epoch    706  total error      0.24127   avg weight        56.569
+epoch    707  total error      0.24049   avg weight        56.468
+epoch    708  total error      0.24127   avg weight        56.542
+epoch    709  total error      0.24049   avg weight        56.519
+epoch    710  total error      0.24127   avg weight        56.554
+epoch    711  total error      0.24049   avg weight        56.519
+epoch    712  total error      0.24127   avg weight        56.481
+epoch    713  total error      0.24049   avg weight        56.436
+epoch    714  total error      0.24127   avg weight        56.382
+epoch    715  total error      0.24049   avg weight        56.317
+epoch    716  total error      0.24127   avg weight        56.239
+epoch    717  total error      0.24049   avg weight        56.145
+epoch    718  total error      0.24126   avg weight        56.033
+epoch    719  total error      0.24049   avg weight        55.907
+epoch    720  total error      0.24126   avg weight        55.771
+epoch    721  total error      0.24049   avg weight        55.824
+epoch    722  total error      0.24126   avg weight        55.818
+epoch    723  total error      0.24049   avg weight        55.844
+epoch    724  total error      0.24126   avg weight          55.8
+epoch    725  total error      0.24049   avg weight        55.799
+epoch    726  total error      0.24126   avg weight        55.757
+epoch    727  total error      0.24049   avg weight        55.733
+epoch    728  total error      0.24126   avg weight        55.686
+epoch    729  total error      0.24049   avg weight         55.64
+epoch    730  total error      0.24126   avg weight        55.592
+epoch    731  total error      0.24049   avg weight        55.543
+epoch    732  total error      0.24126   avg weight        55.492
+epoch    733  total error      0.24049   avg weight        55.465
+epoch    734  total error      0.24126   avg weight        55.499
+epoch    735  total error      0.24048   avg weight        55.472
+epoch    736  total error      0.24126   avg weight        55.445
+epoch    737  total error      0.24048   avg weight        55.412
+epoch    738  total error      0.24126   avg weight        55.373
+epoch    739  total error      0.24048   avg weight        55.326
+epoch    740  total error      0.24125   avg weight        55.272
+epoch    741  total error      0.24048   avg weight        55.214
+epoch    742  total error      0.24125   avg weight        55.153
+epoch    743  total error      0.24048   avg weight        55.088
+epoch    744  total error      0.24125   avg weight        55.017
+epoch    745  total error      0.24047   avg weight        54.941
+epoch    746  total error      0.24124   avg weight        54.857
+epoch    747  total error      0.24046   avg weight        54.764
+epoch    748  total error      0.24123   avg weight         54.66
+epoch    749  total error      0.24045   avg weight        54.543
+epoch    750  total error      0.24122   avg weight          54.6
+epoch    751  total error      0.24043   avg weight        54.611
+epoch    752  total error      0.24127   avg weight        54.695
+epoch    753  total error       0.2405   avg weight         54.62
+epoch    754  total error       0.2412   avg weight        54.573
+epoch    755  total error       0.2405   avg weight        54.623
+epoch    756  total error       0.2412   avg weight        54.598
+epoch    757  total error      0.24044   avg weight        54.573
+epoch    758  total error      0.24123   avg weight        54.603
+epoch    759  total error      0.24043   avg weight        54.601
+epoch    760  total error       0.2412   avg weight        54.586
+epoch    761  total error      0.24044   avg weight          54.6
+epoch    762  total error       0.2412   avg weight        54.608
+epoch    763  total error      0.24043   avg weight        54.599
+epoch    764  total error       0.2412   avg weight        54.603
+epoch    765  total error      0.24043   avg weight        54.604
+epoch    766  total error      0.24119   avg weight          54.6
+epoch    767  total error      0.24043   avg weight        54.602
+epoch    768  total error      0.24119   avg weight        54.605
+epoch    769  total error      0.24043   avg weight        54.607
+epoch    770  total error      0.24119   avg weight        54.604
+epoch    771  total error      0.24042   avg weight        54.605
+epoch    772  total error      0.24119   avg weight        54.607
+epoch    773  total error      0.24042   avg weight        54.609
+epoch    774  total error      0.24119   avg weight        54.611
+epoch    775  total error      0.24042   avg weight        54.608
+epoch    776  total error      0.24119   avg weight        54.609
+epoch    777  total error      0.24042   avg weight        54.611
+epoch    778  total error      0.24118   avg weight        54.612
+epoch    779  total error      0.24042   avg weight        54.614
+epoch    780  total error      0.24118   avg weight        54.612
+epoch    781  total error      0.24041   avg weight        54.613
+epoch    782  total error      0.24118   avg weight        54.614
+epoch    783  total error      0.24041   avg weight        54.615
+epoch    784  total error      0.24118   avg weight        54.617
+epoch    785  total error      0.24041   avg weight        54.618
+epoch    786  total error      0.24118   avg weight         54.62
+epoch    787  total error      0.24041   avg weight        54.622
+epoch    788  total error      0.24118   avg weight        54.624
+epoch    789  total error      0.24041   avg weight        54.627
+epoch    790  total error      0.24118   avg weight        54.631
+epoch    791  total error      0.24041   avg weight        54.635
+epoch    792  total error      0.24118   avg weight         54.64
+epoch    793  total error      0.24041   avg weight        54.634
+epoch    794  total error      0.24118   avg weight        54.637
+epoch    795  total error      0.24041   avg weight         54.64
+epoch    796  total error      0.24118   avg weight        54.636
+epoch    797  total error      0.24041   avg weight        54.638
+epoch    798  total error      0.24117   avg weight         54.64
+epoch    799  total error      0.24041   avg weight        54.638
+epoch    800  total error      0.24117   avg weight        54.639
+epoch    801  total error      0.24041   avg weight        54.638
+epoch    802  total error      0.24117   avg weight        54.638
+epoch    803  total error      0.24041   avg weight        54.638
+epoch    804  total error      0.24117   avg weight        54.638
+epoch    805  total error      0.24041   avg weight        54.638
+epoch    806  total error      0.24117   avg weight        54.638
+epoch    807  total error      0.24041   avg weight        54.638
+epoch    808  total error      0.24117   avg weight        54.638
+epoch    809  total error      0.24041   avg weight        54.638
+epoch    810  total error      0.24117   avg weight        54.638
+epoch    811  total error      0.24041   avg weight        54.638
+epoch    812  total error      0.24117   avg weight        54.638
+epoch    813  total error      0.24041   avg weight        54.638
+epoch    814  total error      0.24117   avg weight        54.638
+epoch    815  total error      0.24041   avg weight        54.638
+epoch    816  total error      0.24117   avg weight        54.638
+epoch    817  total error      0.24041   avg weight        54.638
+epoch    818  total error      0.24117   avg weight        54.638
+epoch    819  total error      0.24041   avg weight        54.638
+epoch    820  total error      0.24117   avg weight        54.638
+epoch    821  total error      0.24041   avg weight        54.638
+epoch    822  total error      0.24117   avg weight        54.638
+epoch    823  total error      0.24041   avg weight        54.638
+epoch    824  total error      0.24117   avg weight        54.638
+epoch    825  total error      0.24041   avg weight        54.638
+epoch    826  total error      0.24117   avg weight        54.638
+epoch    827  total error      0.24041   avg weight        54.638
+epoch    828  total error      0.24117   avg weight        54.638
+epoch    829  total error      0.24041   avg weight        54.638
+epoch    830  total error      0.24117   avg weight        54.638
+epoch    831  total error      0.24041   avg weight        54.638
+epoch    832  total error      0.24117   avg weight        54.638
+epoch    833  total error      0.24041   avg weight        54.638
+epoch    834  total error      0.24117   avg weight        54.638
+epoch    835  total error       0.2404   avg weight        54.638
+epoch    836  total error      0.24117   avg weight        54.638
+epoch    837  total error       0.2404   avg weight        54.638
+epoch    838  total error      0.24117   avg weight        54.638
+epoch    839  total error       0.2404   avg weight        54.638
+epoch    840  total error      0.24117   avg weight        54.638
+epoch    841  total error       0.2404   avg weight        54.638
+epoch    842  total error      0.24117   avg weight        54.638
+epoch    843  total error       0.2404   avg weight        54.638
+epoch    844  total error      0.24117   avg weight        54.638
+epoch    845  total error       0.2404   avg weight        54.638
+epoch    846  total error      0.24117   avg weight        54.638
+epoch    847  total error       0.2404   avg weight        54.638
+epoch    848  total error      0.24117   avg weight        54.638
+epoch    849  total error       0.2404   avg weight        54.638
+epoch    850  total error      0.24117   avg weight        54.638
+epoch    851  total error       0.2404   avg weight        54.638
+epoch    852  total error      0.24117   avg weight        54.638
+epoch    853  total error       0.2404   avg weight        54.638
+epoch    854  total error      0.24117   avg weight        54.638
+epoch    855  total error       0.2404   avg weight        54.638
+epoch    856  total error      0.24117   avg weight        54.638
+epoch    857  total error       0.2404   avg weight        54.638
+epoch    858  total error      0.24117   avg weight        54.638
+epoch    859  total error       0.2404   avg weight        54.638
+epoch    860  total error      0.24117   avg weight        54.638
+epoch    861  total error       0.2404   avg weight        54.638
+epoch    862  total error      0.24117   avg weight        54.638
+epoch    863  total error       0.2404   avg weight        54.638
+epoch    864  total error      0.24117   avg weight        54.638
+epoch    865  total error       0.2404   avg weight        54.638
+epoch    866  total error      0.24117   avg weight        54.638
+epoch    867  total error       0.2404   avg weight        54.638
+epoch    868  total error      0.24117   avg weight        54.638
+epoch    869  total error       0.2404   avg weight        54.638
+epoch    870  total error      0.24117   avg weight        54.638
+epoch    871  total error       0.2404   avg weight        54.638
+epoch    872  total error      0.24117   avg weight        54.638
+epoch    873  total error       0.2404   avg weight        54.638
+epoch    874  total error      0.24117   avg weight        54.638
+epoch    875  total error       0.2404   avg weight        54.638
+epoch    876  total error      0.24117   avg weight        54.638
+epoch    877  total error       0.2404   avg weight        54.638
+epoch    878  total error      0.24117   avg weight        54.638
+epoch    879  total error       0.2404   avg weight        54.638
+epoch    880  total error      0.24117   avg weight        54.638
+epoch    881  total error       0.2404   avg weight        54.638
+epoch    882  total error      0.24117   avg weight        54.638
+epoch    883  total error       0.2404   avg weight        54.638
+epoch    884  total error      0.24117   avg weight        54.638
+epoch    885  total error       0.2404   avg weight        54.638
+epoch    886  total error      0.24117   avg weight        54.638
+epoch    887  total error       0.2404   avg weight        54.638
+epoch    888  total error      0.24117   avg weight        54.638
+epoch    889  total error       0.2404   avg weight        54.638
+epoch    890  total error      0.24117   avg weight        54.638
+epoch    891  total error       0.2404   avg weight        54.638
+epoch    892  total error      0.24117   avg weight        54.638
+epoch    893  total error       0.2404   avg weight        54.638
+epoch    894  total error      0.24117   avg weight        54.638
+epoch    895  total error       0.2404   avg weight        54.638
+epoch    896  total error      0.24117   avg weight        54.638
+epoch    897  total error       0.2404   avg weight        54.638
+epoch    898  total error      0.24117   avg weight        54.638
+epoch    899  total error       0.2404   avg weight        54.638
+epoch    900  total error      0.24117   avg weight        54.638
+epoch    901  total error       0.2404   avg weight        54.638
+epoch    902  total error      0.24117   avg weight        54.638
+epoch    903  total error       0.2404   avg weight        54.638
+epoch    904  total error      0.24117   avg weight        54.638
+epoch    905  total error       0.2404   avg weight        54.638
+epoch    906  total error      0.24117   avg weight        54.638
+epoch    907  total error       0.2404   avg weight        54.638
+epoch    908  total error      0.24117   avg weight        54.638
+epoch    909  total error       0.2404   avg weight        54.638
+epoch    910  total error      0.24117   avg weight        54.638
+epoch    911  total error       0.2404   avg weight        54.638
+epoch    912  total error      0.24117   avg weight        54.638
+epoch    913  total error       0.2404   avg weight        54.638
+epoch    914  total error      0.24117   avg weight        54.638
+epoch    915  total error       0.2404   avg weight        54.638
+epoch    916  total error      0.24117   avg weight        54.638
+epoch    917  total error       0.2404   avg weight        54.638
+epoch    918  total error      0.24117   avg weight        54.638
+epoch    919  total error       0.2404   avg weight        54.638
+epoch    920  total error      0.24117   avg weight        54.638
+epoch    921  total error       0.2404   avg weight        54.638
+epoch    922  total error      0.24117   avg weight        54.638
+epoch    923  total error       0.2404   avg weight        54.638
+epoch    924  total error      0.24117   avg weight        54.638
+epoch    925  total error       0.2404   avg weight        54.638
+epoch    926  total error      0.24117   avg weight        54.638
+epoch    927  total error       0.2404   avg weight        54.638
+epoch    928  total error      0.24117   avg weight        54.638
+epoch    929  total error       0.2404   avg weight        54.638
+epoch    930  total error      0.24117   avg weight        54.638
+epoch    931  total error       0.2404   avg weight        54.638
+epoch    932  total error      0.24117   avg weight        54.638
+epoch    933  total error       0.2404   avg weight        54.638
+epoch    934  total error      0.24117   avg weight        54.638
+epoch    935  total error       0.2404   avg weight        54.638
+epoch    936  total error      0.24117   avg weight        54.638
+epoch    937  total error       0.2404   avg weight        54.638
+epoch    938  total error      0.24117   avg weight        54.638
+epoch    939  total error       0.2404   avg weight        54.638
+epoch    940  total error      0.24117   avg weight        54.638
+epoch    941  total error       0.2404   avg weight        54.638
+epoch    942  total error      0.24117   avg weight        54.638
+epoch    943  total error       0.2404   avg weight        54.638
+epoch    944  total error      0.24117   avg weight        54.638
+epoch    945  total error       0.2404   avg weight        54.638
+epoch    946  total error      0.24117   avg weight        54.638
+epoch    947  total error       0.2404   avg weight        54.638
+epoch    948  total error      0.24117   avg weight        54.638
+epoch    949  total error       0.2404   avg weight        54.638
+epoch    950  total error      0.24117   avg weight        54.638
+epoch    951  total error       0.2404   avg weight        54.638
+epoch    952  total error      0.24117   avg weight        54.638
+epoch    953  total error       0.2404   avg weight        54.638
+epoch    954  total error      0.24117   avg weight        54.638
+epoch    955  total error       0.2404   avg weight        54.638
+epoch    956  total error      0.24117   avg weight        54.638
+epoch    957  total error       0.2404   avg weight        54.638
+epoch    958  total error      0.24117   avg weight        54.638
+epoch    959  total error       0.2404   avg weight        54.638
+epoch    960  total error      0.24117   avg weight        54.638
+epoch    961  total error       0.2404   avg weight        54.638
+epoch    962  total error      0.24117   avg weight        54.638
+epoch    963  total error       0.2404   avg weight        54.638
+epoch    964  total error      0.24117   avg weight        54.638
+epoch    965  total error       0.2404   avg weight        54.638
+epoch    966  total error      0.24117   avg weight        54.638
+epoch    967  total error       0.2404   avg weight        54.638
+epoch    968  total error      0.24117   avg weight        54.638
+epoch    969  total error       0.2404   avg weight        54.638
+epoch    970  total error      0.24117   avg weight        54.638
+epoch    971  total error       0.2404   avg weight        54.638
+epoch    972  total error      0.24117   avg weight        54.638
+epoch    973  total error       0.2404   avg weight        54.638
+epoch    974  total error      0.24117   avg weight        54.638
+epoch    975  total error       0.2404   avg weight        54.638
+epoch    976  total error      0.24117   avg weight        54.638
+epoch    977  total error       0.2404   avg weight        54.638
+epoch    978  total error      0.24117   avg weight        54.638
+epoch    979  total error       0.2404   avg weight        54.638
+epoch    980  total error      0.24117   avg weight        54.638
+epoch    981  total error       0.2404   avg weight        54.638
+epoch    982  total error      0.24117   avg weight        54.638
+epoch    983  total error       0.2404   avg weight        54.638
+epoch    984  total error      0.24117   avg weight        54.638
+epoch    985  total error       0.2404   avg weight        54.638
+epoch    986  total error      0.24117   avg weight        54.638
+epoch    987  total error       0.2404   avg weight        54.638
+epoch    988  total error      0.24117   avg weight        54.638
+epoch    989  total error       0.2404   avg weight        54.638
+epoch    990  total error      0.24117   avg weight        54.638
+epoch    991  total error       0.2404   avg weight        54.638
+epoch    992  total error      0.24117   avg weight        54.638
+epoch    993  total error       0.2404   avg weight        54.638
+epoch    994  total error      0.24117   avg weight        54.638
+epoch    995  total error       0.2404   avg weight        54.638
+epoch    996  total error      0.24117   avg weight        54.638
+epoch    997  total error       0.2404   avg weight        54.638
+epoch    998  total error      0.24117   avg weight        54.638
+epoch    999  total error       0.2404   avg weight        54.638
+[-1.] [ 0.41963938]
+[-1.] [ 0.61402948]
+[-1.] [ 0.66442516]
+[-1.] [ 0.70560064]
+[-1.] [ 0.71307088]
+[-1.] [ 0.58394677]
+[-1.] [ 0.28432702]
+[-1.] [-0.41240139]
+[-1.] [-0.81973961]
+[-1.] [-0.87361782]
+[-1.] [-0.88280678]
+[-1.] [-0.8850871]
+[-1.] [-0.88603521]
+[-1.] [-0.88652402]
+[-1.] [-0.88667204]
+[-1.] [-0.88661432]
+[-1.] [-0.88622192]
+[-1.] [-0.88546463]
+[-1.] [-0.88442712]
+[-1.] [-0.88286039]
+[-1.] [-0.88062443]
+[-1.] [-0.8775472]
+[-1.] [-0.87324068]
+[-1.] [-0.86717339]
+[-1.] [-0.85899263]
+[-1.] [-0.84842737]
+[-1.] [-0.83617813]
+[-1.] [-0.82412955]
+[-1.] [-0.81437829]
+[-1.] [-0.80779922]
+[-1.] [-0.80422687]
+[-1.] [-0.80247833]
+[-1.] [-0.80148109]
+[-1.] [-0.80103234]
+[-1.] [-0.80077434]
+[-1.] [-0.80054294]
+[-1.] [-0.8003875]
+[-1.] [-0.800281]
+[-1.] [-0.80019155]
+[-1.] [-0.80004794]
+[-1.] [-0.79990742]
+[-1.] [-0.79966008]
+[-1.] [-0.79945723]
+[-1.] [-0.79933118]
+[-1.] [-0.79920724]
+[-1.] [-0.79915699]
+[-1.] [-0.7990746]
+[-1.] [-0.79895047]
+[-1.] [-0.79878045]
+[-1.] [-0.79862625]
+[-1.] [-0.79844605]
+[-1.] [-0.79823848]
+[-1.] [-0.79806846]
+[-1.] [-0.79790315]
+[-1.] [-0.79769882]
+[-1.] [-0.79745926]
+[-0.94594595] [-0.79723808]
+[-0.89189189] [-0.79719622]
+[-0.83783784] [-0.79730117]
+[-0.78378378] [-0.79738941]
+[-0.72972973] [-0.79745006]
+[-0.67567568] [-0.79734984]
+[-0.62162162] [-0.79728123]
+[-0.56756757] [-0.79736514]
+[-0.51351351] [-0.7975379]
+[-0.45945946] [-0.79773021]
+[-0.40540541] [-0.79786708]
+[-0.35135135] [-0.79802658]
+[-0.2972973] [-0.7982775]
+[-0.24324324] [-0.79853446]
+[-0.18918919] [-0.79879137]
+[-0.13513514] [-0.79897878]
+[-0.08108108] [-0.79914061]
+[-0.02702703] [-0.79933699]
+[ 0.02702703] [-0.79951671]
+[ 0.08108108] [-0.79972365]
+[ 0.13513514] [-0.79994948]
+[ 0.18918919] [-0.80009418]
+[ 0.24324324] [-0.80025003]
+[ 0.2972973] [-0.80045677]
+[ 0.35135135] [-0.80062743]
+[ 0.40540541] [-0.80084943]
+[ 0.45945946] [-0.80112651]
+[ 0.51351351] [-0.80138096]
+[ 0.56756757] [-0.80165468]
+[ 0.62162162] [-0.80191838]
+[ 0.67567568] [-0.80210791]
+[ 0.72972973] [-0.8022982]
+[ 0.78378378] [-0.80247233]
+[ 0.83783784] [-0.80264882]
+[ 0.89189189] [-0.80281532]
+[ 0.94594595] [-0.80290118]
+[ 1.] [-0.8029752]
+[ 0.94871795] [-0.80295038]
+[ 0.8974359] [-0.80289835]
+[ 0.84615385] [-0.80284445]
+[ 0.79487179] [-0.80276122]
+[ 0.74358974] [-0.80257432]
+[ 0.69230769] [-0.80232386]
+[ 0.64102564] [-0.80205511]
+[ 0.58974359] [-0.80195519]
+[ 0.53846154] [-0.80183666]
+[ 0.48717949] [-0.80168481]
+[ 0.43589744] [-0.80145506]
+[ 0.38461538] [-0.80115323]
+[ 0.33333333] [-0.80093101]
+[ 0.28205128] [-0.80077037]
+[ 0.23076923] [-0.80065425]
+[ 0.17948718] [-0.80048188]
+[ 0.12820513] [-0.80020719]
+[ 0.07692308] [-0.79995518]
+[ 0.02564103] [-0.79971773]
+[-0.02564103] [-0.7995243]
+[-0.07692308] [-0.79938458]
+[-0.12820513] [-0.7992125]
+[-0.17948718] [-0.79909301]
+[-0.23076923] [-0.79916833]
+[-0.28205128] [-0.79923013]
+[-0.33333333] [-0.79928678]
+[-0.38461538] [-0.79934403]
+[-0.43589744] [-0.7994384]
+[-0.48717949] [-0.79951319]
+[-0.53846154] [-0.79959111]
+[-0.58974359] [-0.79977626]
+[-0.64102564] [-0.79996263]
+[-0.69230769] [-0.8001297]
+[-0.74358974] [-0.80032255]
+[-0.79487179] [-0.80044718]
+[-0.84615385] [-0.80055358]
+[-0.8974359] [-0.80054466]
+[-0.94871795] [-0.8004367]
+[-1.] [-0.80033477]
+[-0.97402597] [-0.80027097]
+[-0.94805195] [-0.80021582]
+[-0.92207792] [-0.80018856]
+[-0.8961039] [-0.80014951]
+[-0.87012987] [-0.80012291]
+[-0.84415584] [-0.80011579]
+[-0.81818182] [-0.80015859]
+[-0.79220779] [-0.80022278]
+[-0.76623377] [-0.80032574]
+[-0.74025974] [-0.80036202]
+[-0.71428571] [-0.80035478]
+[-0.68831169] [-0.80048845]
+[-0.66233766] [-0.80065288]
+[-0.63636364] [-0.80074308]
+[-0.61038961] [-0.80084872]
+[-0.58441558] [-0.80092171]
+[-0.55844156] [-0.80091242]
+[-0.53246753] [-0.80087956]
+[-0.50649351] [-0.8008468]
+[-0.48051948] [-0.80078273]
+[-0.45454545] [-0.80069443]
+[-0.42857143] [-0.80057778]
+[-0.4025974] [-0.80045131]
+[-0.37662338] [-0.80045343]
+[-0.35064935] [-0.80052555]
+[-0.32467532] [-0.80051233]
+[-0.2987013] [-0.80053004]
+[-0.27272727] [-0.80045251]
+[-0.24675325] [-0.80030853]
+[-0.22077922] [-0.80068922]
+[-0.19480519] [-0.8012516]
+[-0.16883117] [-0.80186363]
+[-0.14285714] [-0.80263734]
+[-0.11688312] [-0.80354053]
+[-0.09090909] [-0.80456493]
+[-0.06493506] [-0.80568656]
+[-0.03896104] [-0.80678817]
+[-0.01298701] [-0.80811754]
+[ 0.01298701] [-0.8081611]
+[ 0.03896104] [-0.80765069]
+[ 0.06493506] [-0.80803755]
+[ 0.09090909] [-0.80853975]
+[ 0.11688312] [-0.80903371]
+[ 0.14285714] [-0.80968639]
+[ 0.16883117] [-0.80978469]
+[ 0.19480519] [-0.80943584]
+[ 0.22077922] [-0.80911639]
+[ 0.24675325] [-0.80896208]
+[ 0.27272727] [-0.80885226]
+[ 0.2987013] [-0.80866315]
+[ 0.32467532] [-0.80838003]
+[ 0.35064935] [-0.8082986]
+[ 0.37662338] [-0.80813812]
+[ 0.4025974] [-0.80791491]
+[ 0.42857143] [-0.80759817]
+[ 0.45454545] [-0.80723007]
+[ 0.48051948] [-0.80700858]
+[ 0.50649351] [-0.80674437]
+[ 0.53246753] [-0.80631627]
+[ 0.55844156] [-0.8058931]
+[ 0.58441558] [-0.80551558]
+[ 0.61038961] [-0.8051192]
+[ 0.63636364] [-0.80470056]
+[ 0.66233766] [-0.80420711]
+[ 0.68831169] [-0.80369095]
+[ 0.71428571] [-0.80307811]
+[ 0.74025974] [-0.80250088]
+[ 0.76623377] [-0.80207212]
+[ 0.79220779] [-0.80163729]
+[ 0.81818182] [-0.8015335]
+[ 0.84415584] [-0.801405]
+[ 0.87012987] [-0.80122172]
+[ 0.8961039] [-0.8011443]
+[ 0.92207792] [-0.80121789]
+[ 0.94805195] [-0.80132225]
+[ 0.97402597] [-0.80136169]
+[ 1.] [-0.80127396]
+[ 1.] [-0.80122679]
+[ 1.] [-0.80124071]
+[ 1.] [-0.80123464]
+[ 1.] [-0.80125492]
+[ 1.] [-0.80127256]
+[ 1.] [-0.80112491]
+[ 1.] [-0.80094187]
+[ 1.] [-0.80082257]
+[ 1.] [-0.80068528]
+[ 1.] [-0.80059322]
+[ 1.] [-0.80052058]
+[ 1.] [-0.80044816]
+[ 1.] [-0.80024716]
+[ 1.] [-0.80005302]
+[ 1.] [-0.79992475]
+[ 1.] [-0.79977499]
+[ 1.] [-0.7995958]
+[ 1.] [-0.79945976]
+[ 1.] [-0.79935119]
+[ 1.] [-0.79923823]
+[ 1.] [-0.79918981]
+[ 1.] [-0.799347]
+[ 1.] [-0.79940462]
+[ 1.] [-0.79941058]
+[ 1.] [-0.79947709]
+[ 1.] [-0.79946017]
+[ 1.] [-0.79941029]
+[ 1.] [-0.7994101]
+[ 1.] [-0.79934422]
+[ 1.] [-0.79925994]
+[ 1.] [-0.79915847]
+[ 1.] [-0.79899631]
+[ 1.] [-0.79885757]
+[ 1.] [-0.79871182]
+[ 1.] [-0.79864144]
+[ 1.] [-0.7986597]
+[ 1.] [-0.79860201]
+[ 1.] [-0.79850103]
+[ 1.] [-0.79845612]
+[ 1.] [-0.7985195]
+[ 1.] [-0.79860553]
+[ 1.] [-0.7987035]
+[ 1.] [-0.79871815]
+[ 1.] [-0.79865128]
+[ 1.] [-0.79861264]
+[ 1.] [-0.79864259]
+[ 1.] [-0.79861902]
+[ 1.] [-0.79859932]
+[ 1.] [-0.7984832]
+[ 1.] [-0.79838237]
+[ 1.] [-0.79836508]
+[ 1.] [-0.79831012]
+[ 1.] [-0.79823192]
+[ 1.] [-0.79826937]
+[ 1.] [-0.79829372]
+[ 1.] [-0.79832321]
+[ 0.98] [-0.79837323]
+[ 0.96] [-0.7984704]
+[ 0.94] [-0.79859085]
+[ 0.92] [-0.79872327]
+[ 0.9] [-0.79889398]
+[ 0.88] [-0.79904566]
+[ 0.86] [-0.79911091]
+[ 0.84] [-0.79910376]
+[ 0.82] [-0.79919545]
+[ 0.8] [-0.7993263]
+[ 0.78] [-0.79942724]
+[ 0.76] [-0.79952413]
+[ 0.74] [-0.79945056]
+[ 0.72] [-0.7992915]
+[ 0.7] [-0.79914132]
+[ 0.68] [-0.79905752]
+[ 0.66] [-0.79898622]
+[ 0.64] [-0.79884826]
+[ 0.62] [-0.79864985]
+[ 0.6] [-0.79842751]
+[ 0.58] [-0.79818852]
+[ 0.56] [-0.79824713]
+[ 0.54] [-0.79833267]
+[ 0.52] [-0.79830252]
+[ 0.5] [-0.79824761]
+[ 0.48] [-0.79815648]
+[ 0.46] [-0.79813151]
+[ 0.44] [-0.79816276]
+[ 0.42] [-0.79818662]
+[ 0.4] [-0.79816312]
+[ 0.38] [-0.79804797]
+[ 0.36] [-0.79792918]
+[ 0.34] [-0.79780349]
+[ 0.32] [-0.79769073]
+[ 0.3] [-0.7974994]
+[ 0.28] [-0.79719781]
+[ 0.26] [-0.79715546]
+[ 0.24] [-0.79724814]
+[ 0.22] [-0.7972607]
+[ 0.2] [-0.79729192]
+[ 0.18] [-0.79726056]
+[ 0.16] [-0.79721456]
+[ 0.14] [-0.79721022]
+[ 0.12] [-0.79724528]
+[ 0.1] [-0.79726254]
+[ 0.08] [-0.797272]
+[ 0.06] [-0.79731337]
+[ 0.04] [-0.79730494]
+[ 0.02] [-0.79728779]
+[ 0.] [-0.79728093]
+[-0.02] [-0.79730453]
+[-0.04] [-0.79739022]
+[-0.06] [-0.79739849]
+[-0.08] [-0.79744973]
+[-0.1] [-0.79745922]
+[-0.12] [-0.79743647]
+[-0.14] [-0.79749274]
+[-0.16] [-0.797576]
+[-0.18] [-0.79764033]
+[-0.2] [-0.79774573]
+[-0.22] [-0.79788791]
+[-0.24] [-0.79803311]
+[-0.26] [-0.79814533]
+[-0.28] [-0.79826651]
+[-0.3] [-0.79842429]
+[-0.32] [-0.79856686]
+[-0.34] [-0.79870871]
+[-0.36] [-0.79882445]
+[-0.38] [-0.79895204]
+[-0.4] [-0.79901103]
+[-0.42] [-0.79902722]
+[-0.44] [-0.79904585]
+[-0.46] [-0.79900569]
+[-0.48] [-0.79903555]
+[-0.5] [-0.79906415]
+[-0.52] [-0.79901964]
+[-0.54] [-0.79887484]
+[-0.56] [-0.79873698]
+[-0.58] [-0.79858072]
+[-0.6] [-0.79851973]
+[-0.62] [-0.79854688]
+[-0.64] [-0.79858992]
+[-0.66] [-0.79854771]
+[-0.68] [-0.79845645]
+[-0.7] [-0.79835147]
+[-0.72] [-0.79828737]
+[-0.74] [-0.79828568]
+[-0.76] [-0.79834747]
+[-0.78] [-0.79837932]
+[-0.8] [-0.79839499]
+[-0.82] [-0.79840864]
+[-0.84] [-0.79847629]
+[-0.86] [-0.7985169]
+[-0.88] [-0.79858355]
+[-0.9] [-0.79867155]
+[-0.92] [-0.7986638]
+[-0.94] [-0.79871053]
+[-0.96] [-0.79880941]
+[-0.98] [-0.79880555]
+[-1.] [-0.79872699]
+[-1.] [-0.79868934]
+[-1.] [-0.79864697]
+[-1.] [-0.7986144]
+[-1.] [-0.79858756]
+[-1.] [-0.7984802]
+[-1.] [-0.79835492]
+[-1.] [-0.7983051]
+[-1.] [-0.79829178]
+[-1.] [-0.79841895]
+[-1.] [-0.79856691]
+[-1.] [-0.79858012]
+[-1.] [-0.79860154]
+[-1.] [-0.79865888]
+[-1.] [-0.79875357]
+[-1.] [-0.79891991]
+[-1.] [-0.79913958]
+[-1.] [-0.79935821]
+[-1.] [-0.79960622]
+[-1.] [-0.79986655]
+[-1.] [-0.8000964]
+[-1.] [-0.80030788]
+[-1.] [-0.80052906]
+[-1.] [-0.80075074]
+[-1.] [-0.80097415]
+[-1.] [-0.80112273]
+[-1.] [-0.80127525]
+[-1.] [-0.80136146]
+[-1.] [-0.80142769]
+[-1.] [-0.80164689]
+[-1.] [-0.80182752]
+[-1.] [-0.80200006]
+[-1.] [-0.80212728]
+[-1.] [-0.80218605]
+[-1.] [-0.80231981]
+[-1.] [-0.8023481]
+[-1.] [-0.80230506]
+[-1.] [-0.80241278]
+[-1.] [-0.80247754]
+[-1.] [-0.80247385]
+[-1.] [-0.80244239]
+[-1.] [-0.80232475]
+[-1.] [-0.80213072]
+[-1.] [-0.80197403]
+[-1.] [-0.80188811]
+[-1.] [-0.8018135]
+[-1.] [-0.80161584]
+[-1.] [-0.80149318]
+[-1.] [-0.80142255]
+[-1.] [-0.80133478]
+[-1.] [-0.80130741]
+[-1.] [-0.80133004]
+[-1.] [-0.8012819]
+[-1.] [-0.80119656]
+[-1.] [-0.80107317]
+[-1.] [-0.80102176]
+[-1.] [-0.80104049]
+[-1.] [-0.8009975]
+[-1.] [-0.80104857]
+[-1.] [-0.80103212]
+[-1.] [-0.80092432]
+[-1.] [-0.80086198]
+[-1.] [-0.80080578]
+[-1.] [-0.80072743]
+[-1.] [-0.80062251]
+[-1.] [-0.80043947]
+[-1.] [-0.80044757]
+[-1.] [-0.80051554]
+[-1.] [-0.80043828]
+[-1.] [-0.80038366]
+[-1.] [-0.80025727]
+[-1.] [-0.80006974]
+[-1.] [-0.7999009]
+[-1.] [-0.79985403]
+[-1.] [-0.79982093]
+[-1.] [-0.79982464]
+[-1.] [-0.79992011]
+[-1.] [-0.79991905]
+[-1.] [-0.79985353]
+[-1.] [-0.79986908]
+[-1.] [-0.79981091]
+[-1.] [-0.79976229]
+[-1.] [-0.79973881]
+[-1.] [-0.79974827]
+[-1.] [-0.79982761]
+[-1.] [-0.79998328]
+[-1.] [-0.80008922]
+[-1.] [-0.80025064]
+[-1.] [-0.80030717]
+[-1.] [-0.80039006]
+[-1.] [-0.80048787]
+[-1.] [-0.80055297]
+[-1.] [-0.80061543]
+[-1.] [-0.8008024]
+[-1.] [-0.80083327]
+[-1.] [-0.80083597]
+[-1.] [-0.80090911]
+[-1.] [-0.80088539]
+[-1.] [-0.80092103]
+[-1.] [-0.80097141]
+[-1.] [-0.80097633]
+[-1.] [-0.80089403]
+[-1.] [-0.80078221]
+[-1.] [-0.80066824]
+[-1.] [-0.80052911]
+[-1.] [-0.80032762]
+[-1.] [-0.80004836]
+[-1.] [-0.79980022]
+[-1.] [-0.79948649]
+[-1.] [-0.79921308]
+[-1.] [-0.79900765]
+[-1.] [-0.7988558]
+[-1.] [-0.79861587]
+[-1.] [-0.79833815]
+[-1.] [-0.79805899]
+[-1.] [-0.79787636]
+[-1.] [-0.79778475]
+[-1.] [-0.79773861]
+[-1.] [-0.79764012]
+[-1.] [-0.79750589]
+[-1.] [-0.7973885]
+[-1.] [-0.79734484]
+[-1.] [-0.79742472]
+[-1.] [-0.79757856]
+[-1.] [-0.79768978]
+[-1.] [-0.79779679]
+[-1.] [-0.79786795]
+[-1.] [-0.79801926]
+[-1.] [-0.79819901]
+[-1.] [-0.79833518]
+[-1.] [-0.798507]
+[-1.] [-0.79852593]
+[-1.] [-0.79853886]
+[-1.] [-0.7986604]
+[-1.] [-0.79880663]
+[-1.] [-0.79896831]
+[-1.] [-0.79911221]
+[-1.] [-0.79911934]
+[-1.] [-0.79927564]
+[-1.] [-0.79945813]
+[-1.] [-0.79957451]
+[-1.] [-0.79960048]
+[-1.] [-0.79945907]
+[-1.] [-0.79930048]
+[-1.] [-0.79923116]
+[-1.] [-0.79923707]
+[-1.] [-0.79919759]
+[-1.] [-0.79906131]
+[-1.] [-0.79887407]
+[-1.] [-0.79863899]
+[-1.] [-0.79849892]
+[-1.] [-0.79854285]
+[-1.] [-0.79857259]
+[-1.] [-0.79849711]
+[-1.] [-0.79839244]
+[-1.] [-0.79833704]
+[-1.] [-0.79829763]
+[-1.] [-0.79830713]
+[-1.] [-0.79832557]
+[-1.] [-0.79832434]
+[-1.] [-0.79826574]
+[-1.] [-0.79822266]
+[-1.] [-0.79826777]
+[-1.] [-0.7982911]
+[-1.] [-0.79833169]
+[-1.] [-0.79835312]
+[-1.] [-0.79827714]
+[-1.] [-0.7982537]
+[-1.] [-0.79827575]
+[-1.] [-0.79820724]
+[-1.] [-0.7981833]
+[-1.] [-0.79819041]
+[-0.91304348] [-0.79825942]
+[-0.82608696] [-0.79836931]
+[-0.73913043] [-0.79844194]
+[-0.65217391] [-0.79849773]
+[-0.56521739] [-0.79850945]
+[-0.47826087] [-0.79858138]
+[-0.39130435] [-0.79870151]
+[-0.30434783] [-0.79885622]
+[-0.2173913] [-0.79892659]
+[-0.13043478] [-0.79900243]
+[-0.04347826] [-0.79907119]
+[ 0.04347826] [-0.79912375]
+[ 0.13043478] [-0.79917547]
+[ 0.2173913] [-0.79923678]
+[ 0.30434783] [-0.79929281]
+[ 0.39130435] [-0.79934891]
+[ 0.47826087] [-0.79936123]
+[ 0.56521739] [-0.79943797]
+[ 0.65217391] [-0.79953244]
+[ 0.73913043] [-0.79965124]
+[ 0.82608696] [-0.79977723]
+[ 0.91304348] [-0.79993814]
+[ 1.] [-0.79994906]
+[ 0.92] [-0.79990051]
+[ 0.84] [-0.79989204]
+[ 0.76] [-0.7998812]
+[ 0.68] [-0.79987579]
+[ 0.6] [-0.79984275]
+[ 0.52] [-0.79976101]
+[ 0.44] [-0.79969216]
+[ 0.36] [-0.79954596]
+[ 0.28] [-0.79936926]
+[ 0.2] [-0.79925254]
+[ 0.12] [-0.79912536]
+[ 0.04] [-0.79901982]
+[-0.04] [-0.79888876]
+[-0.12] [-0.79882205]
+[-0.2] [-0.79876226]
+[-0.28] [-0.79861219]
+[-0.36] [-0.79859773]
+[-0.44] [-0.79853732]
+[-0.52] [-0.79844277]
+[-0.6] [-0.79836484]
+[-0.68] [-0.79824675]
+[-0.76] [-0.79808193]
+[-0.84] [-0.79790573]
+[-0.92] [-0.7977645]
+[-1.] [-0.79763239]
+[-1.] [-0.79744965]
+[-1.] [-0.79736722]
+[-1.] [-0.7973967]
+[-1.] [-0.79742729]
+[-1.] [-0.79744727]
+[-1.] [-0.79745597]
+[-1.] [-0.79746144]
+[-1.] [-0.79755665]
+[-1.] [-0.79770391]
+[-1.] [-0.79784657]
+[-1.] [-0.79800948]
+[-1.] [-0.79815719]
+[-1.] [-0.79821924]
+[-1.] [-0.79831444]
+[-1.] [-0.79845332]
+[-1.] [-0.79852629]
+[-1.] [-0.79851797]
+[-1.] [-0.79848983]
+[-1.] [-0.79855533]
+[-1.] [-0.79860947]
+[-0.92307692] [-0.79865453]
+[-0.84615385] [-0.79868002]
+[-0.76923077] [-0.79866248]
+[-0.69230769] [-0.79859098]
+[-0.61538462] [-0.79856318]
+[-0.53846154] [-0.79861236]
+[-0.46153846] [-0.79864076]
+[-0.38461538] [-0.79867614]
+[-0.30769231] [-0.79878511]
+[-0.23076923] [-0.79896664]
+[-0.15384615] [-0.79920479]
+[-0.07692308] [-0.79943795]
+[ 0.] [-0.79955113]
+[ 0.07692308] [-0.79961805]
+[ 0.15384615] [-0.79969796]
+[ 0.23076923] [-0.79979913]
+[ 0.30769231] [-0.79990825]
+[ 0.38461538] [-0.80006587]
+[ 0.46153846] [-0.8002149]
+[ 0.53846154] [-0.80031939]
+[ 0.61538462] [-0.80046187]
+[ 0.69230769] [-0.8005835]
+[ 0.76923077] [-0.80071784]
+[ 0.84615385] [-0.80082638]
+[ 0.92307692] [-0.80084531]
+[ 1.] [-0.80083195]
+[ 0.95] [-0.80080231]
+[ 0.9] [-0.80083609]
+[ 0.85] [-0.80093034]
+[ 0.8] [-0.80091803]
+[ 0.75] [-0.80083448]
+[ 0.7] [-0.80072483]
+[ 0.65] [-0.80057237]
+[ 0.6] [-0.80039114]
+[ 0.55] [-0.80018035]
+[ 0.5] [-0.79996413]
+[ 0.45] [-0.79975896]
+[ 0.4] [-0.7996415]
+[ 0.35] [-0.79958754]
+[ 0.3] [-0.79944724]
+[ 0.25] [-0.799248]
+[ 0.2] [-0.79905074]
+[ 0.15] [-0.79891011]
+[ 0.1] [-0.79883749]
+[ 0.05] [-0.79880172]
+[ 0.] [-0.79876185]
+[-0.05] [-0.79868472]
+[-0.1] [-0.79861984]
+[-0.15] [-0.79856779]
+[-0.2] [-0.79853595]
+[-0.25] [-0.79846165]
+[-0.3] [-0.79830993]
+[-0.35] [-0.79824288]
+[-0.4] [-0.79820779]
+[-0.45] [-0.79812289]
+[-0.5] [-0.79810181]
+[-0.55] [-0.79802931]
+[-0.6] [-0.79787839]
+[-0.65] [-0.79777258]
+[-0.7] [-0.7976778]
+[-0.75] [-0.79762188]
+[-0.8] [-0.79756969]
+[-0.85] [-0.79749964]
+[-0.9] [-0.79742317]
+[-0.95] [-0.79733742]
+[-1.] [-0.79729157]
+[-1.] [-0.79736465]
+[-1.] [-0.79746582]
+[-1.] [-0.79751067]
+[-1.] [-0.79755837]
+[-1.] [-0.79763831]
+[-1.] [-0.79772229]
+[-1.] [-0.79787191]
+[-1.] [-0.79807883]
+[-1.] [-0.79825322]
+[-1.] [-0.79840954]
+[-1.] [-0.7985526]
+[-1.] [-0.79861478]
+[-1.] [-0.79872404]
+[-1.] [-0.79883345]
+[-1.] [-0.79891269]
+[-1.] [-0.79905363]
+[-1.] [-0.79915489]
+[-1.] [-0.79916377]
+[-1.] [-0.79913053]
+[-1.] [-0.79916497]
+[-1.] [-0.79923727]
+[-1.] [-0.79927646]
+[-1.] [-0.79928047]
+[-1.] [-0.79929728]
+[-1.] [-0.79927491]
+[-1.] [-0.79923217]
+[-1.] [-0.79924705]
+[-1.] [-0.79937346]
+[-1.] [-0.79942867]
+[-1.] [-0.7994046]
+[-0.75] [-0.79943888]
+[-0.5] [-0.799372]
+[-0.25] [-0.79927434]
+--------------------
+MSE: 0.807335897307
